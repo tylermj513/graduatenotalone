@@ -41,7 +41,7 @@ h1, h2, h3 {
 }
 
 p.left-top {
-    position:fixed;
+    position:absolute;
     top: 50;
     left: 10;
     height: auto;   
