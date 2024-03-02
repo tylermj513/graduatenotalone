@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+ 
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,20 +12,21 @@ html {
     background-color: lightskyblue;
 }
 
+
 img.left-top {
     position: absolute;
     top: 0;
     left: 0;
-    height: auto; /* 與 h1 相同的高度 */
-    width: 182px; /* 根據高度自動調整寬度，保持圖片比例 */
+    height: auto;  
+    width: 182px;  
 }
 
 img.right-top {
     position: absolute;
     top: 0;
     right: 0;
-    height: auto; /* 與 h1 相同的高度 */
-    width: 182px; /* 根據高度自動調整寬度，保持圖片比例 */
+    height: auto;  
+    width: 182px;  
 }
 
 body {
@@ -29,17 +34,21 @@ body {
     margin: 0 auto;
     height: 100vh; 
 }
-
-/* Typography */
-
-h1, h2, h3 {
-    font-family: 'Sonsie One', cursive;
+ 
+h1, h2, h3 { 
     color: #2a2a2a;
 }
 
-p, input, li {
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: #2a2a2a;
+p, input, li { 
+    color: #2a2a2a; 
+        line-height: 28px;
+   
+	font-family: 'cwTeXYen', sans-serif; 
+    
+}
+#text {
+    line-height: 28px;
+	  font-family: 'cwTeXYen', sans-serif;
 }
 
 h1 {
@@ -62,8 +71,7 @@ p, li {
     font-size: 1.6rem;
     line-height: 1.5;
 }
-
-/* Header layout */
+ 
 
 nav, article, aside, footer {
     background-color: white;
