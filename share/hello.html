@@ -3,22 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download PDF</title>
+<title>Automated Navigation</title>
 </head>
 <body>
-<a id="downloadLink" href="https://github.com/tylermj513/graduatenotalone/blob/master/share/%E6%BC%A2%E5%A0%A1%E6%9C%AC.pdf" download>Click to download PDF</a>
 
 <script>
-document.getElementById("downloadLink").addEventListener("click", function(event) {
-    // Prevent default link behavior
-    event.preventDefault();
-    
-    // Simulate Ctrl+Shift+S keypress
-    if (event.ctrlKey && event.shiftKey && event.key === 'S') {
-        // Programmatically initiate download
-        window.location.href = this.href;
-    }
-});
+// Navigate to the specified URL
+window.location.href = "https://raw.githubusercontent.com/tylermj513/graduatenotalone/master/share/new.css";
+
+// Wait for the page to load, then initiate the download
+window.onload = function() {
+    setTimeout(function() {
+        var link = document.createElement('a');
+        link.href = window.location.href;
+        link.download = 'new.css';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, 1000); // Adjust delay as needed
+};
 </script>
+
 </body>
 </html>
