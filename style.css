@@ -1,6 +1,23 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
  
 
+  
+  
+media (min-width:991px) {
+  .display-in-mobile {
+    display: none;
+  }
+}
+ 
+
+
+
+media (max-width:991px) {
+  .display-in-desktop {
+    display: none;
+  }
+}
+
 
 html, body {
     margin: 0;
@@ -11,7 +28,7 @@ html {
     font-size: 10px;
     background-color: lightskyblue;
 }
-
+ 
 
 img.left-top {
     position: absolute;
@@ -159,4 +176,4 @@ footer {
 	 
 }
 
-   
+ 
