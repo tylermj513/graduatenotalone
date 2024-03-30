@@ -18,3 +18,8 @@ resetButton.addEventListener("click", () => {
   localStorage.setItem("page_view", 1);
   counterContainer.innerHTML = visitCount;
 });
+ 
+ 
+ 
+ 
+ 

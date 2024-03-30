@@ -7,22 +7,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-	
+
+
+    <script> 
+      function detectZoom() {
+        var ratio = 0,
+          screen = window.screen,
+          ua = navigator.userAgent.toLowerCase();
+    
+        if (ua.indexOf('firefox') != -1) {
+          if (window.devicePixelRatio !== undefined) {
+            ratio = window.devicePixelRatio;
+          }
+        } else if (ua.indexOf('msie') != -1) {
+          if (screen.deviceXDPI && screen.logicalXDPI) {
+            ratio = screen.deviceXDPI / screen.logicalXDPI;
+          }
+        } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+          ratio = window.outerWidth / window.innerWidth;
+        }
+        return ratio
+     
+      }
+     
+  
+      window.onload = function() {
+        
+        var zoomRatio = detectZoom();
+        var string = 1.26 / zoomRatio; // 计算调整后的缩放比例
+      document.body.style.zoom = string;  
+  };
+  
+    </script>
+
 	<style>
 			#pic{width:15%;}
 			</style>
-		
-	
+
+<style type="text/css"> 
+  .style1 {
+    font-size: 2.7em;
+    font-weight: bold;
+  }
+  .style2 {font-size: 1.2em}
+  .style3 {font-size: 1.65em} 
+    </style> 
+	<script>
+    
+function copyText() { 
+  var text = "yvchen@csie.ntu.edu.tw";
+   
+  var tempInput = document.createElement("textarea");
+  tempInput.value = text;
+   
+  document.body.appendChild(tempInput);
+   
+  tempInput.select();
+   
+  document.execCommand("copy");
+   
+  document.body.removeChild(tempInput);
+   
+  alert("文字已複製到剪貼簿: " + text);
+}
+</script>
     </head> 
 	 
 	  
-  <body>
+
+    <body >
+    
+    
+    <div id="content">
+    
+			<div id="intro">
+				<h1 class="style1">資工所考試回顧</h1> 
+					<p class="style2">TylerMJ</p>
+			  </div>
+
+			    
 	<img id="pic"  class="left-top" src="../jpg/5.png">
-	<p class="left-top" style="color: lightskyblue;left: 225px;">魔鬼藏在細節裡 真的不要鬼遮眼</p>
     <img  id="pic"  class="right-top" src="../jpg/6.png">
-    <header>
-      <h1>資工所考試回顧</h1>
-    </header>
+ 
     <nav>
       <ul>
           <li><a href="../index.html">首頁</a></li> 
@@ -43,25 +109,32 @@
 	  <a href=
 	  "https://walkccc.me/CLRS/"> 楓葉本solution</a>
             </li>	
+			
+			
+			
   <li>
 	  <a href=
 	  "https://github.com/tylermj513/graduatenotalone/blob/master/share/friedberg_linearalgebra.pdf"> 漢堡本(線性代數) </a>
             </li>
-			
-				  <li>
+  <li>
 	  <a href=
-	  "https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf"> 恐龍本(作業系統) </a>
+	  "https://jlch3554.files.wordpress.com/2012/11/la-solution-2011-7.pdf"> 漢堡本solution </a>
             </li>
 			
-				  <li>
+			
+					  <li>
 	  <a href=
-	  "https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf">離散數學(Rosen)</a>
+	  "https://github.com/tylermj513/graduatenotalone/blob/master/share/Discrete%20Mathematics%20and%20Its%20Applications%20-7th%20Edition-%20-%20Kenneth%20H.%20Rosen%20Students%20Solutions%20Guidel.pdf">離散數學(Rosen)</a>
             </li>
 		
 	  <li>
 	  <a href=
-	  " https://reurl.cc/97LOaY"> 離散數學sol.<a>
+	  "https://github.com/tylermj513/graduatenotalone/blob/master/share/%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8%EF%BC%88rosen%EF%BC%89%E7%AC%AC%E4%BA%94%E7%89%88%E8%A7%A3%E7%AD%94.pdf"> 離散數學solution<a>
             </li>
+			
+			
+			
+		
 			
 			
 			 <li>
@@ -77,7 +150,7 @@
 			
 		 <li>
 	  <a href=
-	  " https://github.com/dmohindru/cod5e/tree/master/solutions"> 白算盤sol.<a>
+	  " https://github.com/dmohindru/cod5e/tree/master/solutions"> 白算盤solution<a>
             </li>	
 			
 			
@@ -87,6 +160,16 @@
 http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approach%20(5th%20edition).pdf
 	  "> 柱子本(計算機組結構)<a>
             </li>
+			
+			
+				  <li>
+	  <a href=
+	  "https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf"> 恐龍本(作業系統) </a>
+            </li>
+			
+			
+			
+			
 			  <li>
 	  <a href="
 			https://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces
@@ -141,17 +224,23 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
             <li>
               <a href="https://www.youtube.com/watch?v=OxGsU8oIWjY">希爾伯特旅館悖論(ref. J大)</a>
             </li>
+            <li>
+              <a href="
+              https://www.youtube.com/@manshi_math">睡前數普--漫士沉思录</a>
+            </li>
 			
 			 <li>
               <a href="https://github.com/cccbook/code_theory/blob/main/02-%E5%93%A5%E5%BE%B7%E7%88%BE%E7%9A%84%E5%AE%9A%E7%90%86.md"
 			  >哥德爾不完備定理(ref. 金門大學 陳鍾誠教授 )</a>
             </li>老師的臉書很常po文 內容也很有趣 自己系上教授也有追
-			
-			
-			
-			
+			 <li>
+              <a href="
+			https://youtu.be/6WJikUaKKNo?si=LYXJ3jTW1auNoxkl&t=4413"
+			  >正交投影矩陣公式 丁丁記憶法</a>
+            </li>
+		
             <li>
-              <a href="https://www.youtube.com/@TchLiyongle">大家好 我是李永樂老師 今天有個小朋友問我一道數學問題</a>
+             大家好 我是 <a href="https://www.youtube.com/@TchLiyongle">李永樂老師</a>今天有個小朋友問我一道數學問題
             </li>
             <ul>
               <li>
@@ -181,6 +270,40 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
               <a href="https://alchemist-al.com/">Algo操作</a>
             </li>不熟的algo就玩個幾次就會熟了
 			
+			<li>
+              <a href="
+			https://visualgo.net/zh/">視覺化演算法  </a>    </li>
+					 <li>
+              <a href="
+			https://www.youtube.com/watch?v=sU4kB_NuaAQ"
+			  > Pseudo Polynomial</a> NTU Algo OCW可以寫信給	<a href="javascript:void(0)" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=yvchen%40csie.ntu.edu.tw'); copyToClipboard('yvchen@csie.ntu.edu.tw'); return false;" style=" color:#FF33F0;">Vivian</a>
+
+         
+        她會給你演算法的課程連結
+            </li>
+	
+			 <li>
+              <a href="
+			
+			https://www.youtube.com/@chunnanhung/videos">演算法by大葉大學教授</a> 用十分緩慢且溫和的速度教你演算法
+            </li> 
+			
+			
+			
+			
+			
+			<li>
+              <a href="
+			
+			https://hackmd.io/xv2barlXQDi_uOe8FPGkow">MIT考試是非題</a>
+            </li> 
+			 <li>
+              <a href="
+			https://www.youtube.com/watch?v=S3ckBIJG6fo">kmp1</a>
+            </li> 
+			  <li>
+              <a href="https://www.youtube.com/watch?v=af1oqpnH1vA">kmp2</a> 這頻道的其他影片我也有看 推推
+            </li> 
 			
 			 <li>
 			 <a href="https://www.mimuw.edu.pl/~erykk/algovis/mcm.html">Matrix Chain Multiplication計算機</a>
@@ -249,6 +372,39 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
         <section>
           <h2>很棒的筆記</h2>
           <ul>
+		  
+			 <li>
+              <a href="https://wjungle.blogspot.com/2023/01/101-wjungle.html">wjungle</a>
+            </li>
+            <ul>
+              <a href="https://tinyurl.com/e44msbsc">線性代數</a>
+            </ul>
+			
+             <ul>
+              <a href="https://tinyurl.com/yttkdhhb ">離散數學</a>
+            </ul>
+			
+             <ul>
+              <a href="https://tinyurl.com/d78x283b ">資料結構</a>
+            </ul>
+			
+             <ul>
+              <a href="https://tinyurl.com/2v8vfu25    ">作業系統</a>
+            </ul>
+			
+             <ul>
+              <a href="https://tinyurl.com/454nfn6y    ">
+			  計算機組織</a>
+            </ul>
+			  	
+             <ul>
+              <a href="https://tinyurl.com/yvvhmvua      ">演算法</a>
+            </ul>
+			
+			
+			 <li>
+              <a href="https://shopee.tw/-%E8%80%83%E7%A0%94-%E5%85%A8%E5%BD%A9-%E9%9B%BB%E5%AD%90%E6%AA%94-%E7%84%A1%E6%B5%AE%E6%B0%B4%E5%8D%B0-%E8%B3%87%E5%B7%A5-%E7%A0%94%E7%A9%B6%E6%89%80-%E8%80%83%E8%A9%A6-%E7%AD%86%E8%A8%98-(-%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B-%E6%BC%94%E7%AE%97%E6%B3%95-%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B5%84%E7%B9%94-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1-)-i.29412808.6853301227">mage大</a>
+            </li>
             <li>
               <a href="https://hackmd.io/@HsuChiChen/linear_algebra">線性代數</a>
             </li>
@@ -504,7 +660,11 @@ https://hackmd.io/@25077667/os-final
             </ul>
           </ul>
         </section>
-        
+		
+		
+		
+         <hr>
+		   
 		
         <section>
 		 <ul>
@@ -589,6 +749,11 @@ https://hackmd.io/@25077667/os-final
  
 
 				<ul>
+				<li><a href="
+				https://www.sanfoundry.com/operating-system-questions-answers/">sanfoundry選擇題</a></li>	 
+				
+				
+				
 				<li><a href="https://inst.eecs.berkeley.edu/~cs162/sp23">berkeley</a></li>	 
 		<li><a href="https://inst.eecs.berkeley.edu/~cs162/sp23/static/exams/">以往berkeley考古</a></li>
 		</ul>
@@ -625,5 +790,6 @@ https://hackmd.io/@25077667/os-final
      <a href=" https://miro.com/app/board/uXjVP200ync=/?share_link_id=370763437742" style="text-decoration:none;">	    <p>TylerMJ</p></a>
 	  <!--倘若你發現這個小驚喜 傳email至ben20415@gmail.com 主旨寫【我會正取的】--> 
     </footer>
+  </div>
   </body>
 </html>

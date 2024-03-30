@@ -5,7 +5,36 @@
         <title>資工所考試回顧</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One">
         <link rel="stylesheet" href="style.css">
+		<script> 
+			function detectZoom() {
+				var ratio = 0,
+					screen = window.screen,
+					ua = navigator.userAgent.toLowerCase();
 		
+				if (ua.indexOf('firefox') != -1) {
+					if (window.devicePixelRatio !== undefined) {
+						ratio = window.devicePixelRatio;
+					}
+				} else if (ua.indexOf('msie') != -1) {
+					if (screen.deviceXDPI && screen.logicalXDPI) {
+						ratio = screen.deviceXDPI / screen.logicalXDPI;
+					}
+				} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+					ratio = window.outerWidth / window.innerWidth;
+				}
+				return ratio
+		 
+			}
+		 
+	
+			window.onload = function() {
+				
+				var zoomRatio = detectZoom();
+				var string = 1.26 / zoomRatio; // 计算调整后的缩放比例
+		document.body.style.zoom = string;  
+	};
+	
+		</script>
 	<style>
 	 
 		 
@@ -21,18 +50,28 @@
 			 
 		
 	</style>
-	
+	<style type="text/css"> 
+		.style1 {
+			font-size: 2.7em;
+			font-weight: bold;
+		}
+		.style2 {font-size: 1.2em}
+		.style3 {font-size: 1.65em} 
+			</style> 
     </head> 
 	    
-    <body>
-	 
+
+	<body >
+		<div id="content">
+			<div id="intro">
+				<h1 class="style1">資工所考試回顧</h1> 
+					<p class="style2">TylerMJ</p>
+			  </div> 
+ 
 	 <img id="pic"   class="left-top"  src="../jpg/7.jpg" >
 	 <img id="pic"    class="right-top"  src="../jpg/8.jpg" >
 	
-	
-        <header>
-            <h1>資工所考試回顧</h1>
-        </header>
+	 
         <nav>
             <ul>
                 <li><a href="../index.html">首頁</a></li> 
@@ -43,20 +82,23 @@
         <main>
             <article> 
 			 <li>
-			 首先，先感謝我的高中同學傑瑞。這一路上的打氣支持互相幫忙真的很感謝。強者我同學，正取交大77777
-			
+			 首先，先感謝我的高中同學傑瑞。這一路上的打氣支持互相幫忙真的很感謝，從當年一起去同一間試場考學測，到後來討論到debug，再到考研究所。即使再來在不同城市，但相信你一定可以面對未來的挑戰並能迎刃而解的，未來的路上你也能順利，跟大嫂長長久久，年薪百萬，績效大爆射。
+			 
+			 強者我同學，正取交大 
+		
+				
 			 </li>
 			<img src="j.jpg"   width="10%" >
 			<img src="12.png"   width="14.3%" >
 			<p>那天考前跟彼此說要上交成</p>
 			  
 			  <li>
-			 然後要感謝dc上的一群大神，J大 水源誠哥  東8 SayA nana姊 元元 習大大 fun姊 白癡競賽專題大大 bucha大 則哥 justinwu 4427 xiayu 雅羽 學妹 族繁不及備載
+			 再來要感謝dc上的一群大神，J大 水源誠哥  東8 SayA nana姊 元元 習大大 fun姊 白癡競賽專題大大 bucha大 則哥 justinwu 4427 xiayu 雅羽 學妹 族繁不及備載
 			
 			 </li>
 			 
 			<li>
-				其次要感謝tg的peter哥  s大 當時s大的訊息很動人 也給了我信心 萬分感謝
+				其次要感謝tg的peter哥  s大 那時謝謝s大妳的訊息很touching 也給了我信心 萬分感謝
 			
 			 </li>
 			 <li>
@@ -64,13 +106,26 @@
 			</li>	 
 			
 			<li>
-					再者要感謝大學同學 魚仔 清大妹妹的男友 帥哥主人的男友 火的孩子 多米粉絲 david tim
+					再者要感謝大學同學 魚仔 清大妹妹的男友 帥哥主人的男友 火的孩子 多米粉絲 福格先生 david tim
 			</li>	
 			<li>
-					最後要感謝高中同學 祝咱們未來都能順利
+					然後要感謝高中同學 不管是要讀研/出國/當兵都好好加油 祝咱們未來 感情、事業、健康都能夠順利
 			</li>	
 			
+			
+			
+			
+				<li>
+					再然後要感謝我的媽跟哥能夠這樣義無反顧地支持我重考
+			</li>	
 			 
+			
+				<li>
+					最後要感謝自己，竟然能夠半年只看一部電影。我愛王淨❤️
+			</li>	
+			
+			<img src="pig.jpg"   width="20%" >
+			
 			
 				<div class="container">
 
@@ -79,8 +134,8 @@
 			</div>
  
 
-				<p >另外感謝謝孟恭主委 散步三花 博恩 曼報 好味小姐 miula 新資料夾的podcast陪伴</p>
-				  
+				<p >另外感謝謝孟恭主委 散步三花 博恩 曼報 好味小姐 miula 新資料夾的podcast陪伴 
+				<br/>以及南希肯恩 守夜人 周董 意公子 蔣勳老師的心靈救贖</p> 
 			
 			
 			<li> 
@@ -96,5 +151,7 @@
 			<p>TylerMJ</p>
 			<p class="hidden-text">還有謝謝mj 開學的那則訊息給了我力量去面對 雖然不知道你現在過得如何 但希望我們都能夠快快樂樂地 活成自己想要的樣子</p>
 		</footer>
+
+	</div>
     </body>
 </html>

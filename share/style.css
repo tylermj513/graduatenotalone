@@ -1,5 +1,36 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
  
+#content { width: 850px; margin: 0 auto; }
+@font-face {
+    font-family: 'PanPanZhuRouTi';
+    src: url('../panpanzhurouti.otf') format('opentype');
+}
+h1.style1 {
+    font-family: 'PanPanZhuRouTi', sans-serif; 
+    letter-spacing: 25px; 
+    font-size: 40px;  
+    color:#ffffff;
+    -webkit-text-stroke-width:thin; /* This sets the width of the stroke around the text */
+    -webkit-text-stroke-color:#BA1928; /* This sets the color of the stroke around the text (for Safari and Chrome) */ 
+    text-shadow: 
+        5px 5px 5px #0A0C9D, /* This sets the first layer of shadow */
+        7px 7px 5px  #0A0C9D; /* This sets the second layer of shadow */
+}
+
+
+#intro { 
+	clear: both;
+	background: #fff url(../jpg/spi.jpeg) no-repeat;
+    background-size: cover; 
+	color: #863487;
+	height:60px;
+	margin: 0 0 20px;
+	padding: 45px 40px 0 0;
+	text-align: right;
+}
+#intro h1 { margin: 0; }
+#intro p { margin: 0; }
+
 
 html, body {
     margin: 0;
@@ -10,47 +41,44 @@ html {
     font-size: 10px;
     background-color: lightskyblue;
 }
+ 
 
 img.left-top {
     position: absolute;
     top: 0;
     left: 0;
-    height: auto; /* 與 h1 相同的高度 */
-    width: 182px; /* 根據高度自動調整寬度，保持圖片比例 */
+    height: auto;  
+    width: 182px;  
 }
 
 img.right-top {
     position: absolute;
     top: 0;
     right: 0;
-    height: auto; /* 與 h1 相同的高度 */
-    width: 182px; /* 根據高度自動調整寬度，保持圖片比例 */
+    height: auto;  
+    width: 182px;  
 }
 
 body {
     width: 70%;
     margin: 0 auto;
     height: 100vh; 
-	
 }
-
-/* Typography */
-
+ 
 h1, h2, h3 { 
     color: #2a2a2a;
 }
 
-p.left-top {
-    position:absolute;
-    top: 50;
-    left: 10;
-    height: auto;   
+p, input, li { 
+    color: #2a2a2a; 
+        line-height: 28px;
+   
+	font-family: 'cwTeXYen', sans-serif; 
+    
 }
-
-p, input, li {
-   font-family: 'cwTeXYen', sans-serif; 
-
-    color: #2a2a2a;
+#text {
+    line-height: 28px;
+	  font-family: 'cwTeXYen', sans-serif;
 }
 
 h1 {
@@ -73,8 +101,7 @@ p, li {
     font-size: 1.6rem;
     line-height: 1.5;
 }
-
-/* Header layout */
+ 
 
 nav, article, aside, footer {
     background-color: white;
@@ -143,7 +170,7 @@ main {
 
 article {
     flex: 4;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
 }
 
@@ -162,5 +189,4 @@ footer {
 	 
 }
 
-  
-  
+ 

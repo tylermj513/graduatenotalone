@@ -3,26 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Automated Navigation</title>
+<title>Clickable Text Copy</title>
+<script>
+function copyText() {
+  /* Get the text content */
+  var text = document.getElementById("copyText").innerText;
+  
+  /* Create a temporary textarea element */
+  var tempInput = document.createElement("textarea");
+  tempInput.value = text;
+  
+  /* Append the textarea to the body */
+  document.body.appendChild(tempInput);
+  
+  /* Select the text in the textarea */
+  tempInput.select();
+  
+  /* Copy the selected text */
+  document.execCommand("copy");
+  
+  /* Remove the textarea */
+  document.body.removeChild(tempInput);
+   
+}
+</script>
 </head>
 <body>
-
-<script>
-// Navigate to the specified URL
-window.location.href = "https://raw.githubusercontent.com/tylermj513/graduatenotalone/master/share/new.css";
-
-// Wait for the page to load, then initiate the download
-window.onload = function() {
-    setTimeout(function() {
-        var link = document.createElement('a');
-        link.href = window.location.href;
-        link.download = 'new.css';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }, 1000); // Adjust delay as needed
-};
-</script>
-
+  <p id="copyText" onclick="copyText()" style="cursor: pointer;">Click this text to copy</p>
 </body>
 </html>
