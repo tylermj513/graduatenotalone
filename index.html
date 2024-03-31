@@ -18,7 +18,7 @@
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	
-	
+
 	<script>	
 	$(document).ready(function(){
 			if (IsPC()) {
@@ -60,9 +60,15 @@
 				}
 	
 				window.onload = askUserToAdjustZoom;
+				var content = document.getElementById("content");
+        content.style.width = "850px";
+        content.style.margin = "0 auto";
+				
 			} else {
-				// Code for non-PC devices
-			}
+				var content = document.getElementById("content");
+        content.style.width = "620px";
+        content.style.margin = "0 auto";
+    }
 		});
 	
 		function IsPC() { 
@@ -81,10 +87,7 @@
 		 
 
 	<style>
-		#content {
-			width: 620px;
-			margin: 0 auto;
-		}
+	
 
 
 		#left_side {

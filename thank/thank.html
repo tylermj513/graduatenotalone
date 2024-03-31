@@ -48,9 +48,12 @@
 						}
 					}
 		
-					window.onload = askUserToAdjustZoom;
-				} else {
-					// Code for non-PC devices
+					window.onload = askUserToAdjustZoom;var content = document.getElementById("content");
+        content.style.width = "850px";
+        content.style.margin = "0 auto";
+				} else {var content = document.getElementById("content");
+        content.style.width = "620px";
+        content.style.margin = "0 auto";
 				}
 			});
 		
@@ -69,11 +72,7 @@
 		</script>
 	
 	
-	<style>
-		#content {
-			width: 620px;
-			margin: 0 auto;
-		}
+	<style> 
 
 
 		#left_side {
