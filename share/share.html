@@ -13,35 +13,61 @@
 
 
   <script>
-    function detectZoom() {
-      var ratio = 0,
-        screen = window.screen,
-        ua = navigator.userAgent.toLowerCase();
+    $(document).ready(function () {
+      if (IsPC()) {
+        function detectZoom() {
+          var ratio = 0,
+            screen = window.screen,
+            ua = navigator.userAgent.toLowerCase();
 
-      if (ua.indexOf('firefox') != -1) {
-        if (window.devicePixelRatio !== undefined) {
-          ratio = window.devicePixelRatio;
+          if (ua.indexOf('firefox') != -1) {
+            if (window.devicePixelRatio !== undefined) {
+              ratio = window.devicePixelRatio;
+            }
+          } else if (ua.indexOf('msie') != -1) {
+            if (screen.deviceXDPI && screen.logicalXDPI) {
+              ratio = screen.deviceXDPI / screen.logicalXDPI;
+            }
+          } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+            ratio = window.outerWidth / window.innerWidth;
+          }
+          return ratio;
         }
-      } else if (ua.indexOf('msie') != -1) {
-        if (screen.deviceXDPI && screen.logicalXDPI) {
-          ratio = screen.deviceXDPI / screen.logicalXDPI;
+
+        function adjustPageZoom() {
+          var zoomRatio = detectZoom();
+          var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
+          document.body.style.zoom = string;
         }
-      } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
-        ratio = window.outerWidth / window.innerWidth;
+
+        function askUserToAdjustZoom() {
+          var currentZoom = detectZoom();
+
+
+
+          adjustPageZoom();
+        }
+
+        window.onload = askUserToAdjustZoom;
+      } else {
+        // Code for non-PC devices
       }
-      return ratio
+    });
 
-    }
-
-
-    window.onload = function () {
-
-      var zoomRatio = detectZoom();
-      var string = 1.26 / zoomRatio; // 计算调整后的缩放比例
-      document.body.style.zoom = string;
-    };
-
+    function IsPC() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    } 
   </script>
+
   <style>
     #content {
       width: 850px;
