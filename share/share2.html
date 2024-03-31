@@ -6,11 +6,7 @@
 
 
 	<meta charset="utf-8">
-	<title>資工所考試回顧</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="style.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>資工所考試回顧(建議用電腦看)</title>
 
 	<link rel="stylesheet" href="style.css">
 	<script def er src="index.js"></script>
@@ -21,112 +17,117 @@
 -->
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	
+		
 	
 	<script>	
-	$(document).ready(function(){
-			if (IsPC()) {
-				function detectZoom() {
-					var ratio = 0,
-						screen = window.screen,
-						ua = navigator.userAgent.toLowerCase();
-	
-					if (ua.indexOf('firefox') != -1) {
-						if (window.devicePixelRatio !== undefined) {
-							ratio = window.devicePixelRatio;
+		$(document).ready(function(){
+				if (IsPC()) {
+					function detectZoom() {
+						var ratio = 0,
+							screen = window.screen,
+							ua = navigator.userAgent.toLowerCase();
+		
+						if (ua.indexOf('firefox') != -1) {
+							if (window.devicePixelRatio !== undefined) {
+								ratio = window.devicePixelRatio;
+							}
+						} else if (ua.indexOf('msie') != -1) {
+							if (screen.deviceXDPI && screen.logicalXDPI) {
+								ratio = screen.deviceXDPI / screen.logicalXDPI;
+							}
+						} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+							ratio = window.outerWidth / window.innerWidth;
 						}
-					} else if (ua.indexOf('msie') != -1) {
-						if (screen.deviceXDPI && screen.logicalXDPI) {
-							ratio = screen.deviceXDPI / screen.logicalXDPI;
+						return ratio;
+					}
+		
+					function adjustPageZoom() {
+						var zoomRatio = detectZoom();
+						var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
+						document.body.style.zoom = string;   
+					}
+		
+					function askUserToAdjustZoom() {
+						var currentZoom = detectZoom();
+						if (currentZoom !== 1.25) { // Assuming 1.25 is the default zoom ratio for PC
+							var confirmMessage = "為了讓你閱讀的最佳品質，是否願意調整視窗大小?"; 
+							if (confirm(confirmMessage)) { 
+								adjustPageZoom();
+							} else { 
+								alert("很遺憾你做出了這個選擇。");
+							}
 						}
-					} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
-						ratio = window.outerWidth / window.innerWidth;
 					}
-					return ratio;
+		
+					window.onload = askUserToAdjustZoom;
+				} else {
+					// Code for non-PC devices
 				}
-	
-				function adjustPageZoom() {
-					var zoomRatio = detectZoom();
-					var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
-					document.body.style.zoom = string;   
-				}
-	
-				function askUserToAdjustZoom() {
-					var currentZoom = detectZoom();
-					if (currentZoom !== 1.25) { // Assuming 1.25 is the default zoom ratio for PC
-						adjustPageZoom();
-					}
-				}
-	
-				window.onload = askUserToAdjustZoom;
-			} else {
-				// Code for non-PC devices
-			}
-		});
-	
-		function IsPC() { 
-			var userAgentInfo = navigator.userAgent; 
-			var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"); 
-			var flag = true; 
-			for (var v = 0; v < Agents.length; v++) { 
-				if (userAgentInfo.indexOf(Agents[v]) > 0) { 
-					flag = false; 
-					break; 
+			});
+		
+			function IsPC() { 
+				var userAgentInfo = navigator.userAgent; 
+				var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"); 
+				var flag = true; 
+				for (var v = 0; v < Agents.length; v++) { 
+					if (userAgentInfo.indexOf(Agents[v]) > 0) { 
+						flag = false; 
+						break; 
+					} 
 				} 
+				return flag; 
 			} 
-			return flag; 
-		} 
-	</script>
-		 
-
-	<style>
-		#content {
-			width: 850px;
-			margin: 0 auto;
+		</script>
+			 
+	
+		<style>
+			#content {
+				width: 850px;
+				margin: 0 auto;
+			}
+	
+	
+			#left_side {
+				position:absolute;
+	
+				float: left;
+				width: 100px;
+				left: 0px;
+			}
+	
+			#right_side {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 180px;
+			}
+		</style>
+	  <style>
+		#pic {
+		  width: 15%;
 		}
-
-
-		#left_side {
-			position:absolute;
-
-			float: left;
-			width: 100px;
-			left: 0px;
-		}
-
-		#right_side {
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 180px;
-		}
-	</style>
-  <style>
-    #pic {
-      width: 15%;
-    }
-  </style>
-	<style type="text/css">
-		.style1 {
-			font-size: 2.7em;
-			font-weight: bold;
-		}
-
-		.style2 {
-			font-size: 1.2em;
-			color: white
-		}
-
-		.style3 {
-			font-size: 1.65em
-		}
-	</style>
-	<style>
-		.shadow-text {
-			text-shadow: 0px 0px 1px #4d4d4d;
-		}
-	</style>
- 
+	  </style>
+		<style type="text/css">
+			.style1 {
+				font-size: 2.7em;
+				font-weight: bold;
+			}
+	
+			.style2 {
+				font-size: 1.2em;
+				color: white
+			}
+	
+			.style3 {
+				font-size: 1.65em
+			}
+		</style>
+		<style>
+			.shadow-text {
+				text-shadow: 0px 0px 1px #4d4d4d;
+			}
+		</style>
+	
 
 </head>
 
