@@ -63,13 +63,16 @@ body {
     width: 70%;
     margin: 0 auto;
     height: 100vh; 
+    
 }
  
 h1, h2, h3 { 
     color: #2a2a2a;
 }
+ 
 
 p, input, li { 
+     
     color: #2a2a2a; 
         line-height: 28px;
    
@@ -77,6 +80,7 @@ p, input, li {
     
 }
 #text {
+    
     line-height: 28px;
 	  font-family: 'cwTeXYen', sans-serif;
 }
@@ -98,7 +102,7 @@ h3 {
 }
 
 p, li {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5;
 }
  
@@ -115,7 +119,7 @@ nav {
     margin-bottom: 10px;
 }
 
-nav ul {
+nav ul { 
     padding: 0;
     list-style-type: none;
     flex: 2;
@@ -169,8 +173,13 @@ main {
 }
 
 article {
-    flex: 4;
-    font-size: 2rem;
+    flex:4;
+    font-size: 2rem;  
+    color: #6d6262; 
+    line-height: 28px;
+
+    font-family: 'cwTeXYen', sans-serif; 
+
 
 }
 
