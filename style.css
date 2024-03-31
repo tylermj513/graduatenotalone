@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
  
-#content { width:850px; margin: 0 auto; }
+/*#content { width:850px; margin: 10 auto; }*/
 @font-face {
     font-family: 'PanPanZhuRouTi';
     src: url('panpanzhurouti.otf') format('opentype');
@@ -69,7 +69,7 @@ p, input, li {
     
 }
 #text {
-    line-height: 28px;
+    line-height: 40px;
 	  font-family: 'cwTeXYen', sans-serif;
 }
 
