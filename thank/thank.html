@@ -46,6 +46,7 @@
 
 				window.onload = askUserToAdjustZoom;
 			} else {
+				alert("很遺憾你做出了這個選擇。");
 				function detectZoom() {
 					var ratio = 0,
 						screen = window.screen,
@@ -112,14 +113,14 @@
 
 
 	<style>
-		#content {
-			width: 850px;
+		#content { 
+			width:850px;
 			margin: 0 auto;
 		}
 
 
 		#left_side {
-			position: fixed;
+			position: static;
 
 			float: left;
 			width: 100px;
@@ -127,7 +128,7 @@
 		}
 
 		#right_side {
-			position: fixed;
+			position: static;
 			right: 0;
 			top: 0;
 			width: 180px;
