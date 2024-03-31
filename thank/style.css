@@ -102,7 +102,7 @@ h3 {
 }
 
 p, li {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.5;
 }
  
@@ -173,15 +173,11 @@ main {
 }
 
 article {
-    flex:4;
-    font-size: 2rem;  
-    color: #6d6262; 
-    line-height: 28px;
-
-    font-family: 'cwTeXYen', sans-serif; 
-
+    flex: 4;
+    font-size: 2rem;
 
 }
+
 aside {
     flex: 1;
     margin-left: 10px;
