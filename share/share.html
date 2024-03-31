@@ -1,222 +1,249 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>資工所考試回顧</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+<head>
+  <meta charset="utf-8">
+  <title>資工所考試回顧</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
 
 
-    <script> 
-      function detectZoom() {
-        var ratio = 0,
-          screen = window.screen,
-          ua = navigator.userAgent.toLowerCase();
-    
-        if (ua.indexOf('firefox') != -1) {
-          if (window.devicePixelRatio !== undefined) {
-            ratio = window.devicePixelRatio;
-          }
-        } else if (ua.indexOf('msie') != -1) {
-          if (screen.deviceXDPI && screen.logicalXDPI) {
-            ratio = screen.deviceXDPI / screen.logicalXDPI;
-          }
-        } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
-          ratio = window.outerWidth / window.innerWidth;
+  <script>
+    function detectZoom() {
+      var ratio = 0,
+        screen = window.screen,
+        ua = navigator.userAgent.toLowerCase();
+
+      if (ua.indexOf('firefox') != -1) {
+        if (window.devicePixelRatio !== undefined) {
+          ratio = window.devicePixelRatio;
         }
-        return ratio
-     
+      } else if (ua.indexOf('msie') != -1) {
+        if (screen.deviceXDPI && screen.logicalXDPI) {
+          ratio = screen.deviceXDPI / screen.logicalXDPI;
+        }
+      } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+        ratio = window.outerWidth / window.innerWidth;
       }
-     
-  
-      window.onload = function() {
-        
-        var zoomRatio = detectZoom();
-        var string = 1.26 / zoomRatio; // 计算调整后的缩放比例
-      document.body.style.zoom = string;  
-  };
-  
-    </script>
+      return ratio
 
-	<style>
-			#pic{width:15%;}
-			</style>
+    }
 
-<style type="text/css"> 
-  .style1 {
-    font-size: 2.7em;
-    font-weight: bold;
-  }
-  .style2 {font-size: 1.2em}
-  .style3 {font-size: 1.65em} 
-    </style> 
-	<script>
-    
-function copyText() { 
-  var text = "yvchen@csie.ntu.edu.tw";
-   
-  var tempInput = document.createElement("textarea");
-  tempInput.value = text;
-   
-  document.body.appendChild(tempInput);
-   
-  tempInput.select();
-   
-  document.execCommand("copy");
-   
-  document.body.removeChild(tempInput);
-   
-  alert("文字已複製到剪貼簿: " + text);
-}
-</script>
-    </head> 
-	 
-	  
 
-    <body >
-    
-    
-    <div id="content">
-    
-			<div id="intro">
-				<h1 class="style1">資工所考試回顧</h1> 
-					<p class="style2">TylerMJ</p>
-			  </div>
+    window.onload = function () {
 
-			    
-	<img id="pic"  class="left-top" src="../jpg/5.png">
-    <img  id="pic"  class="right-top" src="../jpg/6.png">
- 
+      var zoomRatio = detectZoom();
+      var string = 1.26 / zoomRatio; // 计算调整后的缩放比例
+      document.body.style.zoom = string;
+    };
+
+  </script>
+  <style>
+    #content {
+      width: 850px;
+      margin: 0 auto;
+    }
+
+
+    #left_side {
+      position: fixed;
+
+      float: left;
+      width: 100px;
+      left: 0px;
+    }
+
+    #right_side {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 180px;
+    }
+  </style>
+  <style>
+    #pic {
+      width: 15%;
+    }
+  </style>
+
+  <style type="text/css">
+    .style1 {
+      font-size: 2.7em;
+      font-weight: bold;
+    }
+
+    .style2 {
+      font-size: 1.2em
+    }
+
+    .style3 {
+      font-size: 1.65em
+    }
+  </style>
+  <script>
+
+    function copyText() {
+      var text = "yvchen@csie.ntu.edu.tw";
+
+      var tempInput = document.createElement("textarea");
+      tempInput.value = text;
+
+      document.body.appendChild(tempInput);
+
+      tempInput.select();
+
+      document.execCommand("copy");
+
+      document.body.removeChild(tempInput);
+
+      alert("文字已複製到剪貼簿: " + text);
+    }
+  </script>
+</head>
+
+
+
+<body>
+
+
+  <div id="content">
+
+    <div id="intro">
+      <h1 class="style1">資工所考試回顧</h1>
+      <p class="style2">TylerMJ</p>
+    </div>
+
+
+    <img id="pic" class="left-top" src="../jpg/5.png">
+    <img id="pic" class="right-top" src="../jpg/6.png">
+
     <nav>
       <ul>
-          <li><a href="../index.html">首頁</a></li> 
-                <li><a href="">資源分享</a></li>
-                <li><a href="../thank/thank.html">感謝的人</a></li>
+        <li><a href="../index.html">首頁</a></li>
+        <li><a href="">資源分享</a></li>
+        <li><a href="../thank/thank.html">感謝的人</a></li>
         </li>
       </ul>
     </nav>
     <main>
       <article>
-	  
-	   <ul>
-	  <li>
-	  <a href=
-	  "https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf"> 楓葉本(演算法) </a>
-            </li>
-	   <li>
-	  <a href=
-	  "https://walkccc.me/CLRS/"> 楓葉本solution</a>
-            </li>	
-			
-			
-			
-  <li>
-	  <a href=
-	  "https://github.com/tylermj513/graduatenotalone/blob/master/share/friedberg_linearalgebra.pdf"> 漢堡本(線性代數) </a>
-            </li>
-  <li>
-	  <a href=
-	  "https://jlch3554.files.wordpress.com/2012/11/la-solution-2011-7.pdf"> 漢堡本solution </a>
-            </li>
-			
-			
-					  <li>
-	  <a href=
-	  "https://github.com/tylermj513/graduatenotalone/blob/master/share/Discrete%20Mathematics%20and%20Its%20Applications%20-7th%20Edition-%20-%20Kenneth%20H.%20Rosen%20Students%20Solutions%20Guidel.pdf">離散數學(Rosen)</a>
-            </li>
-		
-	  <li>
-	  <a href=
-	  "https://github.com/tylermj513/graduatenotalone/blob/master/share/%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8%EF%BC%88rosen%EF%BC%89%E7%AC%AC%E4%BA%94%E7%89%88%E8%A7%A3%E7%AD%94.pdf"> 離散數學solution<a>
-            </li>
-			
-			
-			
-		
-			
-			
-			 <li>
-	  <a href=
-	  "https://www.cse.iitd.ac.in/~rijurekha/col216/edition5.pdf"> 白算盤(計算機組織)<a>
-            </li>	
-			
-						
-			 <li>
-	  <a href=
-	  "https://github.com/dmohindru/cod5e/tree/master/appendix"> 白算盤附錄<a>
-            </li>	
-			
-		 <li>
-	  <a href=
-	  " https://github.com/dmohindru/cod5e/tree/master/solutions"> 白算盤solution<a>
-            </li>	
-			
-			
-			 <li>
-	  <a href=
-	  "
+
+        <ul>
+          <li>
+            <a
+              href="https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf">
+              楓葉本(演算法) </a>
+          </li>
+          <li>
+            <a href="https://walkccc.me/CLRS/"> 楓葉本solution</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://github.com/tylermj513/graduatenotalone/blob/master/share/friedberg_linearalgebra.pdf">
+              漢堡本(線性代數) </a>
+          </li>
+          <li>
+            <a href="https://jlch3554.files.wordpress.com/2012/11/la-solution-2011-7.pdf"> 漢堡本solution </a>
+          </li>
+
+
+          <li>
+            <a
+              href="https://github.com/tylermj513/graduatenotalone/blob/master/share/Discrete%20Mathematics%20and%20Its%20Applications%20-7th%20Edition-%20-%20Kenneth%20H.%20Rosen%20Students%20Solutions%20Guidel.pdf">離散數學(Rosen)</a>
+          </li>
+
+          <li>
+            <a
+              href="https://github.com/tylermj513/graduatenotalone/blob/master/share/%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8%EF%BC%88rosen%EF%BC%89%E7%AC%AC%E4%BA%94%E7%89%88%E8%A7%A3%E7%AD%94.pdf">
+              離散數學solution<a>
+          </li>
+
+
+
+
+
+
+          <li>
+            <a href="https://www.cse.iitd.ac.in/~rijurekha/col216/edition5.pdf"> 白算盤(計算機組織)<a>
+          </li>
+
+
+          <li>
+            <a href="https://github.com/dmohindru/cod5e/tree/master/appendix"> 白算盤附錄<a>
+          </li>
+
+          <li>
+            <a href=" https://github.com/dmohindru/cod5e/tree/master/solutions"> 白算盤solution<a>
+          </li>
+
+
+          <li>
+            <a href="
 http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approach%20(5th%20edition).pdf
 	  "> 柱子本(計算機組結構)<a>
-            </li>
-			
-			
-				  <li>
-	  <a href=
-	  "https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf"> 恐龍本(作業系統) </a>
-            </li>
-			
-			
-			
-			
-			  <li>
-	  <a href="
-			https://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces
- </a>
-            </li>( ref.<a href="
-			https://www.ptt.cc/man/Gossiping/D601/DBC0/DC08/DAEC/M.1587751043.A.28E.html">有神快拜 </a> )
-			
-			
-	  <li>
-	  <a href=
-	  "https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf"> 恐龍本(作業系統) </a>
-            </li>
-		  
-	  <li>
-	  <a href=
-	  "https://os-book.com/OS10/regular-exercises/index-exer.html"> 恐龍exercise </a>
-            </li>		
-		  <li>
-	  <a href=
-	  "https://os-book.com/OS10/practice-exercises/index-solu.html"> 恐龍exercise  solution</a>
-            </li>		
-			
-		  <li>
-	  <a href=
-	  "https://os-book.com/OS10/study-guide/Study-Guide.pdf"> 恐龍預複習</a>
-            </li>	
+          </li>
 
-		</ul>		
+
+          <li>
+            <a href="https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf">
+              恐龍本(作業系統) </a>
+          </li>
+
+
+
+
+          <li>
+            <a href="
+			https://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces
+            </a>
+          </li>( ref.<a href="
+			https://www.ptt.cc/man/Gossiping/D601/DBC0/DC08/DAEC/M.1587751043.A.28E.html">有神快拜 </a> )
+
+
+          <li>
+            <a href="https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf">
+              恐龍本(作業系統) </a>
+          </li>
+
+          <li>
+            <a href="https://os-book.com/OS10/regular-exercises/index-exer.html"> 恐龍exercise </a>
+          </li>
+          <li>
+            <a href="https://os-book.com/OS10/practice-exercises/index-solu.html"> 恐龍exercise solution</a>
+          </li>
+
+          <li>
+            <a href="https://os-book.com/OS10/study-guide/Study-Guide.pdf"> 恐龍預複習</a>
+          </li>
+
+        </ul>
 
 
         </section>
-		
-		
-		
+
+
+
         <section>
-		
-		
+
+
           <h2>數學</h2>
           <ul>
             <li>
-              <a href="https://youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&si=SLRYqz_jImOh8gxu">3Blue1Brown</a>
+              <a
+                href="https://youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&si=SLRYqz_jImOh8gxu">3Blue1Brown</a>
             </li>
             <li>
               <a href="https://matrixcalc.org/zh-TW/">矩陣計算機 Matrix Calculator</a> 超級讚
             </li>
             <li>
-              <a href="https://atozmath.com/MatrixEv.aspx?q=qrdecompgs&q1=1%2C-1%2C4%3B1%2C4%2C-2%3B1%2C4%2C2%3B1%2C-1%2C0%60qrdecompgs%60&dm=F&dp=8&do=1#tblSolution">QR分解</a>
+              <a
+                href="https://atozmath.com/MatrixEv.aspx?q=qrdecompgs&q1=1%2C-1%2C4%3B1%2C4%2C-2%3B1%2C4%2C2%3B1%2C-1%2C0%60qrdecompgs%60&dm=F&dp=8&do=1#tblSolution">QR分解</a>
             </li>
             <li>
               <a href="https://www.omnicalculator.com/math/chinese-remainder">中國餘數定理計算機</a>
@@ -228,19 +255,19 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
               <a href="
               https://www.youtube.com/@manshi_math">睡前數普--漫士沉思录</a>
             </li>
-			
-			 <li>
-              <a href="https://github.com/cccbook/code_theory/blob/main/02-%E5%93%A5%E5%BE%B7%E7%88%BE%E7%9A%84%E5%AE%9A%E7%90%86.md"
-			  >哥德爾不完備定理(ref. 金門大學 陳鍾誠教授 )</a>
-            </li>老師的臉書很常po文 內容也很有趣 自己系上教授也有追
-			 <li>
-              <a href="
-			https://youtu.be/6WJikUaKKNo?si=LYXJ3jTW1auNoxkl&t=4413"
-			  >正交投影矩陣公式 丁丁記憶法</a>
-            </li>
-		
+
             <li>
-             大家好 我是 <a href="https://www.youtube.com/@TchLiyongle">李永樂老師</a>今天有個小朋友問我一道數學問題
+              <a
+                href="https://github.com/cccbook/code_theory/blob/main/02-%E5%93%A5%E5%BE%B7%E7%88%BE%E7%9A%84%E5%AE%9A%E7%90%86.md">哥德爾不完備定理(ref.
+                金門大學 陳鍾誠教授 )</a>
+            </li>老師的臉書很常po文 內容也很有趣 自己系上教授也有追
+            <li>
+              <a href="
+			https://youtu.be/6WJikUaKKNo?si=LYXJ3jTW1auNoxkl&t=4413">正交投影矩陣公式 丁丁記憶法</a>
+            </li>
+
+            <li>
+              大家好 我是 <a href="https://www.youtube.com/@TchLiyongle">李永樂老師</a>今天有個小朋友問我一道數學問題
             </li>
             <ul>
               <li>
@@ -253,7 +280,8 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
                 <a href="https://www.youtube.com/watch?v=M2apWwvOqko">希爾伯特旅館悖論</a>
               </li>
               <li>
-                <a href="https://www.youtube.com/watch?v=Yeh1_2GyS5s&list=PLOrDt87s8A3p3CA1kCR0jebK9vVaVHf5o&index=87">Josephus Problem</a>
+                <a href="https://www.youtube.com/watch?v=Yeh1_2GyS5s&list=PLOrDt87s8A3p3CA1kCR0jebK9vVaVHf5o&index=87">Josephus
+                  Problem</a>
               </li>
             </ul>
         </section>
@@ -263,58 +291,62 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
             <li>
               <a href="https://www.youtube.com/@user-go8jt9pq1e/videos">交大曾宇廷學長</a>
             </li>
-			有提及成大110考古跟交大hc hp相關影片以及leetcode解題思路 各位小夥伴記得去看
-			
-			
+            有提及成大110考古跟交大hc hp相關影片以及leetcode解題思路 各位小夥伴記得去看
+
+
             <li>
               <a href="https://alchemist-al.com/">Algo操作</a>
             </li>不熟的algo就玩個幾次就會熟了
-			
-			<li>
-              <a href="
-			https://visualgo.net/zh/">視覺化演算法  </a>    </li>
-					 <li>
-              <a href="
-			https://www.youtube.com/watch?v=sU4kB_NuaAQ"
-			  > Pseudo Polynomial</a> NTU Algo OCW可以寫信給	<a href="javascript:void(0)" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=yvchen%40csie.ntu.edu.tw'); copyToClipboard('yvchen@csie.ntu.edu.tw'); return false;" style=" color:#FF33F0;">Vivian</a>
 
-         
-        她會給你演算法的課程連結
+            <li>
+              <a href="
+			https://visualgo.net/zh/">視覺化演算法 </a>
             </li>
-	
-			 <li>
+            <li>
+              <a href="
+			https://www.youtube.com/watch?v=sU4kB_NuaAQ"> Pseudo Polynomial</a> NTU Algo OCW可以寫信給 <a href="javascript:void(0)"
+                onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=yvchen%40csie.ntu.edu.tw'); copyToClipboard('yvchen@csie.ntu.edu.tw'); return false;"
+                style=" color:#FF33F0;">Vivian</a>
+
+
+              她會給你演算法的課程連結
+            </li>
+
+            <li>
               <a href="
 			
 			https://www.youtube.com/@chunnanhung/videos">演算法by大葉大學教授</a> 用十分緩慢且溫和的速度教你演算法
-            </li> 
-			
-			
-			
-			
-			
-			<li>
+            </li>
+
+
+
+
+
+            <li>
               <a href="
 			
 			https://hackmd.io/xv2barlXQDi_uOe8FPGkow">MIT考試是非題</a>
-            </li> 
-			 <li>
+            </li>
+            <li>
               <a href="
 			https://www.youtube.com/watch?v=S3ckBIJG6fo">kmp1</a>
-            </li> 
-			  <li>
+            </li>
+            <li>
               <a href="https://www.youtube.com/watch?v=af1oqpnH1vA">kmp2</a> 這頻道的其他影片我也有看 推推
-            </li> 
-			
-			 <li>
-			 <a href="https://www.mimuw.edu.pl/~erykk/algovis/mcm.html">Matrix Chain Multiplication計算機</a>
             </li>
-			
-			  <li>
-              <a href="https://github.com/tylermj/graduatenotalone/tree/master/%E6%BC%94%E7%AE%97%E6%B3%95%E9%9A%A8%E7%AD%86">演算法隨筆</a> (忘了出處抱歉!)
+
+            <li>
+              <a href="https://www.mimuw.edu.pl/~erykk/algovis/mcm.html">Matrix Chain Multiplication計算機</a>
             </li>
-		
-		
-			
+
+            <li>
+              <a
+                href="https://github.com/tylermj/graduatenotalone/tree/master/%E6%BC%94%E7%AE%97%E6%B3%95%E9%9A%A8%E7%AD%86">演算法隨筆</a>
+              (忘了出處抱歉!)
+            </li>
+
+
+
           </ul>
         </section>
         <section>
@@ -323,46 +355,52 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
             <li>
               <a href="https://cpu-scheduling-algorithm-visualiser.netlify.app/">CPU Scheduling Calculator</a>
             </li>google搜尋的第一個那個網站跑得有些是錯的 這個比較好~
-			 <li>
+            <li>
               <a href="
 			https://www.youtube.com/watch?v=Qw89ZlNprpc">複習os的發展</a>
-            </li> 
+            </li>
             <li>
-              <a href="https://github.com/tylermj/graduatenotalone/tree/master/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B5%84%E7%B9%94%E9%9A%A8%E7%AD%86">計組演算隨筆</a> (忘了出處sorry)
+              <a
+                href="https://github.com/tylermj/graduatenotalone/tree/master/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B5%84%E7%B9%94%E9%9A%A8%E7%AD%86">計組演算隨筆</a>
+              (忘了出處sorry)
             </li>
-			
-			
-<li>
+
+
+            <li>
               <a href="https://www.youtube.com/playlist?list=PLylnxZnYW9La5QGcuPy09aLm5kSLV45YE
-">朱宗賢教授解題</a> 
+">朱宗賢教授解題</a>
             </li>
 
 
 
-			
-			 <li>
+
+            <li>
               <a href="
 			http://comet.lehman.cuny.edu/jung/cmp426697/homework1Sp20.pdf">練一下os</a>
             </li>
-			
-			 <li>
+
+            <li>
               <a href="		
 			http://comet.lehman.cuny.edu/jung/cmp426697/homework4Sp20.pdf">練一下os</a>
             </li>
-			
-			
-			
+
+
+
             <li>
-              <a href="https://www.youtube.com/playlist?list=PLwD0kbgjHKhF5zaff0M17JC3FCpoL0yDJ">檔案系統與輸出入處理-2022  OS補充</a>  /<a href="https://www.youtube.com/playlist?list=PLwD0kbgjHKhHaUh1mnJIuwm6otLQW3_UP">作業系統 恐龍1~10章
-            </li> (中興ocw 我覺得教的蠻讚的 因為他是3學分的課focus恐龍11~15章 所以講得很仔細) 
-			
-			
-			
-			<li>
-              <a href="https://medium.com/@chinhung_liu/work-note-semaphore-mutex-spinlock-391bba4c161a">Work Note-Semaphore/Mutex/Spinlock by Chin-Hung Liu -</a>
+              <a href="https://www.youtube.com/playlist?list=PLwD0kbgjHKhF5zaff0M17JC3FCpoL0yDJ">檔案系統與輸出入處理-2022
+                OS補充</a> /<a href="https://www.youtube.com/playlist?list=PLwD0kbgjHKhHaUh1mnJIuwm6otLQW3_UP">作業系統
+                恐龍1~10章
+            </li> (中興ocw 我覺得教的蠻讚的 因為他是3學分的課focus恐龍11~15章 所以講得很仔細)
+
+
+
+            <li>
+              <a href="https://medium.com/@chinhung_liu/work-note-semaphore-mutex-spinlock-391bba4c161a">Work
+                Note-Semaphore/Mutex/Spinlock by Chin-Hung Liu -</a>
             </li>
             <li>
-              <a href="https://welkinchen.pixnet.net/blog/post/47071066-spinlock-%26-mutex-%26-s">Spinlock & Mutex & Semaphore 的作用和區別 @ Welkin小窩 - </a>
+              <a href="https://welkinchen.pixnet.net/blog/post/47071066-spinlock-%26-mutex-%26-s">Spinlock & Mutex &
+                Semaphore 的作用和區別 @ Welkin小窩 - </a>
             </li>
             <li>
               <a href="https://quizlet.com/yijia0112/sets">yijia0112 on Quizlet (可用來練習交大以前的題目)-</a>
@@ -372,38 +410,39 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
         <section>
           <h2>很棒的筆記</h2>
           <ul>
-		  
-			 <li>
+
+            <li>
               <a href="https://wjungle.blogspot.com/2023/01/101-wjungle.html">wjungle</a>
             </li>
             <ul>
               <a href="https://tinyurl.com/e44msbsc">線性代數</a>
             </ul>
-			
-             <ul>
+
+            <ul>
               <a href="https://tinyurl.com/yttkdhhb ">離散數學</a>
             </ul>
-			
-             <ul>
+
+            <ul>
               <a href="https://tinyurl.com/d78x283b ">資料結構</a>
             </ul>
-			
-             <ul>
+
+            <ul>
               <a href="https://tinyurl.com/2v8vfu25    ">作業系統</a>
             </ul>
-			
-             <ul>
+
+            <ul>
               <a href="https://tinyurl.com/454nfn6y    ">
-			  計算機組織</a>
+                計算機組織</a>
             </ul>
-			  	
-             <ul>
+
+            <ul>
               <a href="https://tinyurl.com/yvvhmvua      ">演算法</a>
             </ul>
-			
-			
-			 <li>
-              <a href="https://shopee.tw/-%E8%80%83%E7%A0%94-%E5%85%A8%E5%BD%A9-%E9%9B%BB%E5%AD%90%E6%AA%94-%E7%84%A1%E6%B5%AE%E6%B0%B4%E5%8D%B0-%E8%B3%87%E5%B7%A5-%E7%A0%94%E7%A9%B6%E6%89%80-%E8%80%83%E8%A9%A6-%E7%AD%86%E8%A8%98-(-%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B-%E6%BC%94%E7%AE%97%E6%B3%95-%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B5%84%E7%B9%94-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1-)-i.29412808.6853301227">mage大</a>
+
+
+            <li>
+              <a
+                href="https://shopee.tw/-%E8%80%83%E7%A0%94-%E5%85%A8%E5%BD%A9-%E9%9B%BB%E5%AD%90%E6%AA%94-%E7%84%A1%E6%B5%AE%E6%B0%B4%E5%8D%B0-%E8%B3%87%E5%B7%A5-%E7%A0%94%E7%A9%B6%E6%89%80-%E8%80%83%E8%A9%A6-%E7%AD%86%E8%A8%98-(-%E9%9B%A2%E6%95%A3%E6%95%B8%E5%AD%B8-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B-%E6%BC%94%E7%AE%97%E6%B3%95-%E8%A8%88%E7%AE%97%E6%A9%9F%E7%B5%84%E7%B9%94-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1-)-i.29412808.6853301227">mage大</a>
             </li>
             <li>
               <a href="https://hackmd.io/@HsuChiChen/linear_algebra">線性代數</a>
@@ -412,22 +451,23 @@ http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approa
               <a href="
 https://hackmd.io/@HsuChiChen/computer_organization">計算機組織</a>
             </li>
-			
-	  <li>
-              <a href="https://hackmd.io/C4lSd9mYS0WDphVvcwNZdw?view#heap	">資料結構</a>	
-			 </li>
-			
+
+            <li>
+              <a href="https://hackmd.io/C4lSd9mYS0WDphVvcwNZdw?view#heap	">資料結構</a>
+            </li>
+
             <li>
               <a href="
 https://hackmd.io/6H8LszSiTBW7GGu7ZjimRw#CLRS">演算法</a>
             </li>
-			
-			<li>
-          <a href="https://github.com/tylermj513/graduatenotalone/tree/master/algo(%E6%B8%85%E5%A4%A7%E6%B4%AA%E9%9D%96%E5%98%89)">演算法(清大洪靖嘉)</a>
-        </li>
-			
-			
-			
+
+            <li>
+              <a
+                href="https://github.com/tylermj513/graduatenotalone/tree/master/algo(%E6%B8%85%E5%A4%A7%E6%B4%AA%E9%9D%96%E5%98%89)">演算法(清大洪靖嘉)</a>
+            </li>
+
+
+
             <li>
               <a href="
 https://web.ntnu.edu.tw/~algo/">台師大演算法 看不熟的</a>
@@ -436,19 +476,19 @@ https://web.ntnu.edu.tw/~algo/">台師大演算法 看不熟的</a>
               <a href="
 https://wangwilly.github.io/willywangkaa/categories/Operating-System/">OS</a> 我比較喜歡這個
             </li>
-			
-			<li>
+
+            <li>
               <a href="
 			  https://hackmd.io/@Chang-Chia-Chi/OS/https%3A%2F%2Fhackmd.io%2F%40Chang-Chia-Chi%2FOS-CH3">OS</a> 看你喜歡哪個
             </li>
-			
-			
-			  <li>
+
+
+            <li>
               <a href="
-			https://www.mropengate.com/2017/09/operating-system-concepts.html">OS</a> 青菜蘿蔔各有所好 
+			https://www.mropengate.com/2017/09/operating-system-concepts.html">OS</a> 青菜蘿蔔各有所好
             </li>
-			
-			
+
+
             <li>
               <a href="
 https://file.io/45X6j9mAybZC">【精華筆記】</a>
@@ -499,7 +539,8 @@ https://hackmd.io/@jacksonchen1998/BJ8Iwi8bi">演算法 荊宇泰教授</a>
           <ul>
             <h3>清大 </h3>
             <li>
-              <a href="https://docs.google.com/document/d/135FfbCW3jCoWhFbF_dO1y8XwV_yrwcvvu566RsBMM-s/edit?pli=1">清大作業系統考古題彙整 </a>
+              <a href="https://docs.google.com/document/d/135FfbCW3jCoWhFbF_dO1y8XwV_yrwcvvu566RsBMM-s/edit?pli=1">清大作業系統考古題彙整
+              </a>
             </li>
           </ul>
         </section>
@@ -509,48 +550,49 @@ https://hackmd.io/@jacksonchen1998/BJ8Iwi8bi">演算法 荊宇泰教授</a>
             <li>
               <a href="
 https://staff.csie.ncu.edu.tw/elephant/web/qulify/qualify%20exam.htm">博士班考古</a>
-            </li> 111考古跟110/112碩士考古一樣 
-			
-			 <li>
+            </li> 111考古跟110/112碩士考古一樣
+
+            <li>
               <a href="
 			https://www.studocu.com/tw/user/8581508/uploads
 			">演算法講義</a>
             </li>
-			
-			<li> note</li>
-			<ul>
-			
-			
-			 <li>
+
+            <li> note</li>
+            <ul>
+
+
+              <li>
                 <a href="https://blog.terrynini.tw/en/Advance-Algorithm-homework1/"> 高等演算法功課</a>
               </li>
-			
-			
-			
-			
-			 <li>
+
+
+
+
+              <li>
                 <a href="https://hackmd.io/@nyan-meow/B1ObF_4zO"> 計算機組織midterm</a>
               </li>
-			
-			 <li>
+
+              <li>
                 <a href="https://hackmd.io/@nyan-meow/H1kJvkttu"> 計算機組織final</a>
               </li>
-			  <li>
+              <li>
                 <a href="
 			  https://hackmd.io/@nyan-meow/SyvaZaxMd"> 作業系統</a>
               </li>
-			</ul>
-			
-			
-			<li>系上考古</li>
+            </ul>
+
+
+            <li>系上考古</li>
             <ul>
-			
-			 <li>
-                <a href="https://www.studocu.com/tw/document/national-central-university/operating-system/exam-november-2016-questions-and-answers/10167908">os16</a>
+
+              <li>
+                <a
+                  href="https://www.studocu.com/tw/document/national-central-university/operating-system/exam-november-2016-questions-and-answers/10167908">os16</a>
               </li>
-			
-			
-			
+
+
+
               <li>
                 <a href="
 https://hackmd.io/@jcxyisncu1092/osfinal2020">os20</a>
@@ -562,42 +604,43 @@ https://hackmd.io/@jcxyisncu1092/osfinal2021">os21</a>
               <li>
                 <a href="https://hackmd.io/@jcxyisncu1092/algofinalqte">algo </a>
               </li>
-			  
-			  
+
+
             </ul>
-			
-			
-			
+
+
+
             <li>
-              <a href="https://www.youtube.com/watch?v=oRHvGQ0cOh0&list=PLHCU-cISE57ea3jfto5QIyoQRfCB_hwJW&index=25&t=4514s">蔡孟峰教授 離散數學 </a>
+              <a
+                href="https://www.youtube.com/watch?v=oRHvGQ0cOh0&list=PLHCU-cISE57ea3jfto5QIyoQRfCB_hwJW&index=25&t=4514s">蔡孟峰教授
+                離散數學 </a>
             </li>
           </ul>
         </section>
-		
-		
-	 <section>
+
+
+        <section>
           <ul>
-            <h3>台科			</h3>
+            <h3>台科 </h3>
             <li>
-			  <a href=
-	"https://myntust.com/f/exam"> 考古 </a>
-            </li> 
-	 </ul>
+              <a href="https://myntust.com/f/exam"> 考古 </a>
+            </li>
+          </ul>
         </section>
-	
-	
+
+
         <section>
           <ul>
             <h3>成大</h3>
             <li>
               <a href="https://nckuwu.ccns.io/index.html?q=%E8%B3%87%E8%A8%8A%E7%B3%BB"> ncku數位典藏平台 </a>
             </li>
-			  <li>
+            <li>
               <a href="https://www.youtube.com/channel/UCIvFtm1v6G1kH_8KIXu6IRQ/videos"> patricia除外 其他也講解的很棒
-			  </a>
+              </a>
             </li>
-			
-			
+
+
           </ul>
         </section>
         <section>
@@ -608,15 +651,15 @@ https://hackmd.io/@jcxyisncu1092/osfinal2021">os21</a>
 https://cool.ntu.edu.tw/courses/11767"> 台大os課程 </a>
             </li>登入後就可以看
 
-<li>
+            <li>
               <a href="
 https://www.youtube.com/watch?v=dG7x27LSKQs&list=PLtstG443LLj8w63nNDCQk0meQwadhSNrP&index=3"> 系統程式 </a>
             </li>
- <a href="
+            <a href="
 https://www.youtube.com/playlist?list=PLqwUtSomsxQBGIBvIZ1Fr9v-rQJQI8und"> 洪士灝教授 計算機結構(可當成是計算機組織) </a>
             </li>
 
-			<li>
+            <li>
               <a href="
 https://hackmd.io/@JJLIN/rkVwOUNnD">台大數學 </a>
             </li>
@@ -660,136 +703,163 @@ https://hackmd.io/@25077667/os-final
             </ul>
           </ul>
         </section>
-		
-		
-		
-         <hr>
-		   
-		
+
+
+
+        <hr>
+
+
         <section>
-		 <ul>
-        <li>
-          <a href="https://hackmd.io/@4Aj2uX5YRE-Bc5aukRgxKQ">HackMD Polo</a>
-        </li>
-        <li>DC討論的結論 </li>
-        <li>
-          <a href="https://hackmd.io/@JJLIN/r11dhTu5v">Jimmy大哥Data Structure Note</a>
-        </li>
-        <li>Quizlet Sets: <ul>
+          <ul>
             <li>
-              <a href="https://quizlet.com/696127317/operating-system-exam-3-flash-cards/?funnelUUID=9b008927-f4b7-429a-a8fb-09515aa15895">Operating System Exam 3</a>
+              <a href="https://hackmd.io/@4Aj2uX5YRE-Bc5aukRgxKQ">HackMD Polo</a>
             </li>
+            <li>DC討論的結論 </li>
             <li>
-              <a href="https://quizlet.com/696127081/operating-systems-exam-2-flash-cards/?funnelUUID=b070f7ae-0cb8-4a3f-9ece-5be17d500ede">Operating Systems Exam 2</a>
+              <a href="https://hackmd.io/@JJLIN/r11dhTu5v">Jimmy大哥Data Structure Note</a>
             </li>
-            <li>
-              <a href="https://quizlet.com/696126783/operating-systems-exam-1-flash-cards/?funnelUUID=1de3fcc2-5d83-4d48-97a5-bd8b090a2b38">Operating Systems Exam 1</a>
-            </li>
-            <li>
-              <a href="https://quizlet.com/alexaa_renee/folders/csci-343/sets">CSCI 343</a>
-            </li>
-            <li>
-              <a href="https://quizlet.com/81084830/chapter-3-flash-cards/">Chapter 3</a>
-            </li>
-            <li>
-              <a href="https://quizlet.com/81104330/chapter-5-flash-cards/?funnelUUID=61f3fa3d-2e85-4804-969e-ca7c1e69d673">Chapter 5</a>
-            </li>
-            <li>
-              <a href="https://quizlet.com/647237498/cs433finalreview-flash-cards/">CS 433 Final Review</a>
-            </li>
-            <li>
-              <a href="https://quizlet.com/206889006/ch5-practice-cs-4560-flash-cards/?funnelUUID=55f5876e-b36f-44a9-85dc-b5e20f1b1a79">Ch5 Practice CS 4560</a>
-            </li>
-            <li>
-              <a href="https://quizlet.com/206892296/ch6-practice-cs-4560-flash-cards/?funnelUUID=f87d6358-4363-4d95-a3c6-04cf8461d9cd">Ch6 Practice CS 4560</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557182690/operating-systems-chapter-1-flash-cards/?funnelUUID=04f92c08-3d8c-4e2f-ba14-93ddefc9d8f5">operating-systems-chapter-1</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557198001/os-midterm-flash-cards/?funnelUUID=ba5fe85b-a515-4917-917e-e47494c72bcb">os-midterm-flash-cards</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557198027/os-final-flash-cards/?funnelUUID=779f2f53-041a-41d1-9821-442e8ec25f91">os-final-flash-cards</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557597345/quiz-5-cpu-scheduling-flash-cards/?funnelUUID=78342bfc-8d4b-42ac-a0a9-f9a90424bdcf">5-cpu-scheduling</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557655835/quiz-7-synchronization-examples-flash-cards/?funnelUUID=621ab661-389d-4f2f-9486-c05a45d322c2">7-synchronization</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557663578/quiz-10-virtual-memory-flash-cards/?funnelUUID=7e2ff0ea-e896-44ee-8a3b-99edd7d31159">10-virtual-memory</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557666844/quiz-12-io-systems-flash-cards/?funnelUUID=0f20fbab-47ab-483b-9789-0e8bd8bada48">12-io-systems</a>
-            </li>
-			
-			 <li>
-              <a href="https://quizlet.com/tw/557669690/quiz-13-file-system-interface-flash-cards/?funnelUUID=51c406f1-a2a9-42c0-8526-b2d2afaf882e">13-file-system</a>
+            <li>Quizlet Sets: <ul>
+                <li>
+                  <a
+                    href="https://quizlet.com/696127317/operating-system-exam-3-flash-cards/?funnelUUID=9b008927-f4b7-429a-a8fb-09515aa15895">Operating
+                    System Exam 3</a>
+                </li>
+                <li>
+                  <a
+                    href="https://quizlet.com/696127081/operating-systems-exam-2-flash-cards/?funnelUUID=b070f7ae-0cb8-4a3f-9ece-5be17d500ede">Operating
+                    Systems Exam 2</a>
+                </li>
+                <li>
+                  <a
+                    href="https://quizlet.com/696126783/operating-systems-exam-1-flash-cards/?funnelUUID=1de3fcc2-5d83-4d48-97a5-bd8b090a2b38">Operating
+                    Systems Exam 1</a>
+                </li>
+                <li>
+                  <a href="https://quizlet.com/alexaa_renee/folders/csci-343/sets">CSCI 343</a>
+                </li>
+                <li>
+                  <a href="https://quizlet.com/81084830/chapter-3-flash-cards/">Chapter 3</a>
+                </li>
+                <li>
+                  <a
+                    href="https://quizlet.com/81104330/chapter-5-flash-cards/?funnelUUID=61f3fa3d-2e85-4804-969e-ca7c1e69d673">Chapter
+                    5</a>
+                </li>
+                <li>
+                  <a href="https://quizlet.com/647237498/cs433finalreview-flash-cards/">CS 433 Final Review</a>
+                </li>
+                <li>
+                  <a
+                    href="https://quizlet.com/206889006/ch5-practice-cs-4560-flash-cards/?funnelUUID=55f5876e-b36f-44a9-85dc-b5e20f1b1a79">Ch5
+                    Practice CS 4560</a>
+                </li>
+                <li>
+                  <a
+                    href="https://quizlet.com/206892296/ch6-practice-cs-4560-flash-cards/?funnelUUID=f87d6358-4363-4d95-a3c6-04cf8461d9cd">Ch6
+                    Practice CS 4560</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557182690/operating-systems-chapter-1-flash-cards/?funnelUUID=04f92c08-3d8c-4e2f-ba14-93ddefc9d8f5">operating-systems-chapter-1</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557198001/os-midterm-flash-cards/?funnelUUID=ba5fe85b-a515-4917-917e-e47494c72bcb">os-midterm-flash-cards</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557198027/os-final-flash-cards/?funnelUUID=779f2f53-041a-41d1-9821-442e8ec25f91">os-final-flash-cards</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557597345/quiz-5-cpu-scheduling-flash-cards/?funnelUUID=78342bfc-8d4b-42ac-a0a9-f9a90424bdcf">5-cpu-scheduling</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557655835/quiz-7-synchronization-examples-flash-cards/?funnelUUID=621ab661-389d-4f2f-9486-c05a45d322c2">7-synchronization</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557663578/quiz-10-virtual-memory-flash-cards/?funnelUUID=7e2ff0ea-e896-44ee-8a3b-99edd7d31159">10-virtual-memory</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557666844/quiz-12-io-systems-flash-cards/?funnelUUID=0f20fbab-47ab-483b-9789-0e8bd8bada48">12-io-systems</a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://quizlet.com/tw/557669690/quiz-13-file-system-interface-flash-cards/?funnelUUID=51c406f1-a2a9-42c0-8526-b2d2afaf882e">13-file-system</a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-        </ul>
         </section>
-		
-		
-		  <section>
-		   <ul>
-		   
-		 <li>os雜: </li>
-		 		
- 
 
-				<ul>
-				<li><a href="
-				https://www.sanfoundry.com/operating-system-questions-answers/">sanfoundry選擇題</a></li>	 
-				
-				
-				
-				<li><a href="https://inst.eecs.berkeley.edu/~cs162/sp23">berkeley</a></li>	 
-		<li><a href="https://inst.eecs.berkeley.edu/~cs162/sp23/static/exams/">以往berkeley考古</a></li>
-		</ul>
-		
-		<li><a href="https://www.eecg.toronto.edu/~yuan/teaching/ece344/pastExams/">多倫多的大學 選擇幹一幹</a></li>
-		</ul>
-		
-		
-		
-		 <ul>
 
-		 <li>University of Wisconsin–Madison: </li>
-		  </ul>
-		  
-		  <ul>
-		  	  <ul>
-		  
-		<li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2016/Exams/">16</a></li>
-		<li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2016/Exams/f16-e2-answers.pdf">16exam2 ans</a></li>
-		<li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e1-soln.pdf">15exam1</a></li>
-		<li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e2-answers.pdf">15exam2</a></li>
-		<li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e3-pages-2-answers.pdf">15exam3</a></li>
-		<li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e4-mc-solutions.pdf">15exam4</a></li>
-		<li><a href="https://inst.eecs.berkeley.edu/~cs162/sp20/static/exams/fa13-mt1-solutions.pdf">13exam</a></li>
-			 
-				</ul>
-			</ul>
-		    </section>
-			
-			
+        <section>
+          <ul>
+
+            <li>os雜: </li>
+
+
+
+            <ul>
+              <li><a href="
+				https://www.sanfoundry.com/operating-system-questions-answers/">sanfoundry選擇題</a></li>
+
+
+
+              <li><a href="https://inst.eecs.berkeley.edu/~cs162/sp23">berkeley</a></li>
+              <li><a href="https://inst.eecs.berkeley.edu/~cs162/sp23/static/exams/">以往berkeley考古</a></li>
+            </ul>
+
+            <li><a href="https://www.eecg.toronto.edu/~yuan/teaching/ece344/pastExams/">多倫多的大學 選擇幹一幹</a></li>
+          </ul>
+
+
+
+          <ul>
+
+            <li>University of Wisconsin–Madison: </li>
+          </ul>
+
+          <ul>
+            <ul>
+
+              <li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2016/Exams/">16</a></li>
+              <li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2016/Exams/f16-e2-answers.pdf">16exam2
+                  ans</a></li>
+              <li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e1-soln.pdf">15exam1</a></li>
+              <li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e2-answers.pdf">15exam2</a></li>
+              <li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e3-pages-2-answers.pdf">15exam3</a>
+              </li>
+              <li><a href="https://pages.cs.wisc.edu/~dusseau/Classes/CS537/Fall2015/e4-mc-solutions.pdf">15exam4</a>
+              </li>
+              <li><a href="https://inst.eecs.berkeley.edu/~cs162/sp20/static/exams/fa13-mt1-solutions.pdf">13exam</a>
+              </li>
+
+            </ul>
+          </ul>
+        </section>
+
+
       </article>
     </main>
     <footer>
-     <a href=" https://miro.com/app/board/uXjVP200ync=/?share_link_id=370763437742" style="text-decoration:none;">	    <p>TylerMJ</p></a>
-	  <!--倘若你發現這個小驚喜 傳email至ben20415@gmail.com 主旨寫【我會正取的】--> 
+      <a href=" https://miro.com/app/board/uXjVP200ync=/?share_link_id=370763437742" style="text-decoration:none;">
+        <p>TylerMJ</p>
+      </a>
+      <!--倘若你發現這個小驚喜 傳email至ben20415@gmail.com 主旨寫【我會正取的】-->
     </footer>
   </div>
-  </body>
+</body>
+
 </html>
