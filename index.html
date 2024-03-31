@@ -15,18 +15,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 -->
-	
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	
 
-	<script>	
-	$(document).ready(function(){
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+	<script>
+		$(document).ready(function () {
 			if (IsPC()) {
 				function detectZoom() {
 					var ratio = 0,
 						screen = window.screen,
 						ua = navigator.userAgent.toLowerCase();
-	
+
 					if (ua.indexOf('firefox') != -1) {
 						if (window.devicePixelRatio !== undefined) {
 							ratio = window.devicePixelRatio;
@@ -40,59 +40,83 @@
 					}
 					return ratio;
 				}
-	
+
 				function adjustPageZoom() {
 					var zoomRatio = detectZoom();
 					var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
-					document.body.style.zoom = string;   
+					document.body.style.zoom = string;
 				}
-	
+
 				function askUserToAdjustZoom() {
 					var currentZoom = detectZoom();
 					if (currentZoom !== 1.25) { // Assuming 1.25 is the default zoom ratio for PC
-						var confirmMessage = "為了讓你閱讀的最佳品質，是否願意調整視窗大小?"; 
-						if (confirm(confirmMessage)) { 
+						var confirmMessage = "為了讓你閱讀的最佳品質，是否願意調整視窗大小?";
+						if (confirm(confirmMessage)) {
 							adjustPageZoom();
-						} else { 
+						} else {
 							alert("很遺憾你做出了這個選擇。");
 						}
 					}
 				}
-	
+
 				window.onload = askUserToAdjustZoom;
 				var content = document.getElementById("content");
-        content.style.width = "850px";
-        content.style.margin = "0 auto";
-				
+				content.style.width = "850px";
+				content.style.margin = "0 auto"; 
+
+
+				var imgElement3 = document.querySelector('.style1');
+ 
+				if (imgElement3) { 
+				 
+					imgElement3.style.letterSpacing = '25px';
+					imgElement3.style.fontSize = '40px';  
+ 
+				}
 			} else {
+
 				var content = document.getElementById("content");
-        content.style.width = "750px";
-		content.style.left = "10px";
-        content.style.margin = "0 auto";
-    }
+				content.style.width = "370px";
+				content.style.position = "absolute";
+				content.style.left = "10px";
+				content.style.margin = "0 auto";
+				content.style.float = "left";
+
+				var imgElement = document.querySelector('.left-top');
+				var imgElement2 = document.querySelector('.right-top');
+				var imgElement3 = document.querySelector('.style1');
+ 
+				if (imgElement) { 
+					imgElement.style.width = '60px';
+					imgElement2.style.width = '60px';
+					imgElement3.style.letterSpacing = '20px'; // Use camelCase for letter-spacing
+					imgElement3.style.fontSize = '25px'; // Use camelCase for font-size
+					imgElement3.style.right = '25px';
+					imgElement3.style.position = 'absolute'; 
+				}
+
+				
+			}
 		});
-	
-		function IsPC() { 
-			var userAgentInfo = navigator.userAgent; 
-			var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"); 
-			var flag = true; 
-			for (var v = 0; v < Agents.length; v++) { 
-				if (userAgentInfo.indexOf(Agents[v]) > 0) { 
-					flag = false; 
-					break; 
-				} 
-			} 
-			return flag; 
+
+		function IsPC() {
+			var userAgentInfo = navigator.userAgent;
+			var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+			var flag = true;
+			for (var v = 0; v < Agents.length; v++) {
+				if (userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
 		} 
 	</script>
-		 
+
 
 	<style>
-	
-
-
 		#left_side {
-			position:absolute;
+			position: absolute;
 
 			float: left;
 			width: 100px;
@@ -106,11 +130,11 @@
 			width: 180px;
 		}
 	</style>
-  <style>
-    #pic {
-      width: 15%;
-    }
-  </style>
+	<style>
+		#pic {
+			width: 15%;
+		}
+	</style>
 	<style type="text/css">
 		.style1 {
 			font-size: 2.7em;
@@ -142,10 +166,10 @@
 
 
 	<script>
-		function reloadPage() { 
-		  location.reload();
+		function reloadPage() {
+			location.reload();
 		}
-		</script>
+	</script>
 
 	<div id="content">
 
@@ -259,14 +283,14 @@
 				</p>
 
 
-				<p id="audioControl">
-					<em class="shadow-text">當你試著鼓起勇氣走進她的全世界，
-						要怎麼成為她的愛去成為她一切，
-						你不想錯過機會再失去她一遍，</em>
-					東太平洋漁場時價分析師暨洋流講師兼操盤手海龍王彼得:「有時放棄也是一種選擇，換一種心態，便能學到更多」
-					無論甘心，或不甘心，無論多麼捨不得，我們最終都要學會捨得。捨不得，終究只是妄想而已。
-				</p>
-				<p>
+
+
+
+				<p id="audioControl"><em class="shadow-text">當你試著鼓起勇氣走進她的全世界，要怎麼成為她的愛去成為她一切，你不想錯過機會再失去她一遍，</em></p>
+				<p id="text">東太平洋漁場時價分析師暨洋流講師兼操盤手海龍王彼得:「有時放棄也是一種選擇，換一種心態，便能學到更多」
+					無論甘心，或不甘心，無論多麼捨不得，我們最終都要學會捨得。捨不得，終究只是妄想而已。</p>
+
+				<p id="text">
 					我們的開始，是很長的電影。放映了三年，我票都還留著。我總覺得自己花夠多時間也夠努力去討好妳開心了，寫了好多年的考古，檢討也做盡了，去了妳的學校想像著和妳一起讀書、期待著共享青春的美好，即使如今似乎得到一個對於外表還不錯的結果。但我深知我們再也無法走到一起，妳已經找到了屬於你自己的幸福，現實是我對你來說只是無足輕重的存在，而我還emo到不行
 					妳卻在eeoo 其實我啥也不是 醒醒吧心碎小狗 當想著倘若未來能夠考上，能夠很高興的去跟妳說我做到了，我因為喜歡妳很久了才這麼努力地考上。
 					考試和追女生，彷彿是莊子夢到蝴蝶，或者是蝴蝶夢到莊子，或許兩者皆然。看到別人都在往前move on，即使跟當年價值觀所做出的行為不同，但正是這樣的成長造就了他今日的模樣，而
@@ -331,16 +355,13 @@
 
 			<img src="http://www.web-counter.net/count_20091204.php?c=15VFNlcQQ9O" style="border:0;padding:0;margin:0;"
 				alt="计数器"></a><br />
-			<font size="1" face="Arial">
-
-
-
-				<a href="https://www.instagram.com/_ginglebellaaa/" title="click counter">
 
 
 
 
-					<p>TylerMJ</p>
+
+
+			<p><a href="https://www.instagram.com/_ginglebellaaa/">TylerMJ</a></p>
 		</footer>
 
 	</div>

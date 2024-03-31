@@ -8,7 +8,7 @@
 h1.style1 {
     font-family: 'PanPanZhuRouTi', sans-serif; 
     letter-spacing: 25px; 
-    font-size: 40px;  
+    font-size: 40px;     
     color:#ffffff;
     -webkit-text-stroke-width:thin; /* This sets the width of the stroke around the text */
     -webkit-text-stroke-color:#BA1928; /* This sets the color of the stroke around the text (for Safari and Chrome) */ 
@@ -17,10 +17,10 @@ h1.style1 {
         7px 7px 5px  #0A0C9D; /* This sets the second layer of shadow */
 }
 
-
 #intro { 
 	clear: both;
 	background: #fff url(../jpg/spi.jpeg) no-repeat;
+    background-position: center;
     background-size: cover; 
 	color: #863487;
 	height:60px;
@@ -44,10 +44,19 @@ html {
  
 
 img.left-top { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;  
     width: 182px;  
+    z-index: 999;
 }
 
-img.right-top { 
+img.right-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;  
     width: 182px;  
 }
 

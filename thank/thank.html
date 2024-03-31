@@ -6,98 +6,108 @@
 	<title>資工所考試回顧</title>
 	<link rel="stylesheet" href="style.css">
 	<script def er src="index.js"></script>
-<!--
+	<!--
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-	<script>	
-		$(document).ready(function(){
-				if (IsPC()) {
-					function detectZoom() {
-						var ratio = 0,
-							screen = window.screen,
-							ua = navigator.userAgent.toLowerCase();
-		
-						if (ua.indexOf('firefox') != -1) {
-							if (window.devicePixelRatio !== undefined) {
-								ratio = window.devicePixelRatio;
-							}
-						} else if (ua.indexOf('msie') != -1) {
-							if (screen.deviceXDPI && screen.logicalXDPI) {
-								ratio = screen.deviceXDPI / screen.logicalXDPI;
-							}
-						} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
-							ratio = window.outerWidth / window.innerWidth;
+	<script>
+		$(document).ready(function () {
+			if (IsPC()) {
+				function detectZoom() {
+					var ratio = 0,
+						screen = window.screen,
+						ua = navigator.userAgent.toLowerCase();
+
+					if (ua.indexOf('firefox') != -1) {
+						if (window.devicePixelRatio !== undefined) {
+							ratio = window.devicePixelRatio;
 						}
-						return ratio;
-					}
-		
-					function adjustPageZoom() {
-						var zoomRatio = detectZoom();
-						var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
-						document.body.style.zoom = string;   
-					}
-		
-					function askUserToAdjustZoom() {
-						var currentZoom = detectZoom();
-						if (currentZoom !== 1.25) { // Assuming 1.25 is the default zoom ratio for PC
-							adjustPageZoom();
+					} else if (ua.indexOf('msie') != -1) {
+						if (screen.deviceXDPI && screen.logicalXDPI) {
+							ratio = screen.deviceXDPI / screen.logicalXDPI;
 						}
+					} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+						ratio = window.outerWidth / window.innerWidth;
 					}
-		
-					window.onload = askUserToAdjustZoom;var content = document.getElementById("content");
-        content.style.width = "850px";
-        content.style.margin = "0 auto";
-				} else {var content = document.getElementById("content");
-        content.style.width = "750px";
-		
-		content.style.left = "30px";
-        content.style.margin = "0 auto";
+					return ratio;
 				}
-			});
-		
-			function IsPC() { 
-				var userAgentInfo = navigator.userAgent; 
-				var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"); 
-				var flag = true; 
-				for (var v = 0; v < Agents.length; v++) { 
-					if (userAgentInfo.indexOf(Agents[v]) > 0) { 
-						flag = false; 
-						break; 
-					} 
-				} 
-				return flag; 
-			} 
-		</script>
-	
-	
-	<style> 
+
+				function adjustPageZoom() {
+					var zoomRatio = detectZoom();
+					var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
+					document.body.style.zoom = string;
+				}
+
+				function askUserToAdjustZoom() {
+					var currentZoom = detectZoom();
+					if (currentZoom !== 1.25) { // Assuming 1.25 is the default zoom ratio for PC
+						adjustPageZoom();
+					}
+				}
+
+				window.onload = askUserToAdjustZoom; var content = document.getElementById("content");
+				content.style.width = "850px";
+				content.style.margin = "0 auto"; 
 
 
-		#left_side {
-			position:absolute;
+				var imgElement3 = document.querySelector('.style1');
+ 
+				if (imgElement3) { 
+				 
+					imgElement3.style.letterSpacing = '25px';
+					imgElement3.style.fontSize = '40px';  
+ 
+				}
+			} else {
 
-			float: left;
-			width: 100px;
-			left: 0px;
-		}
+				var content = document.getElementById("content");
+				content.style.width = "370px";
+				content.style.position = "absolute";
+				content.style.left = "10px";
+				content.style.margin = "0 auto";
+				content.style.float = "left";
 
-		#right_side {
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 180px;
+				var imgElement = document.querySelector('.left-top');
+				var imgElement2 = document.querySelector('.right-top');
+				var imgElement3 = document.querySelector('.style1');
+ 
+				if (imgElement) { 
+					imgElement.style.width = '60px';
+					imgElement2.style.width = '60px';
+					imgElement3.style.letterSpacing = '20px'; // Use camelCase for letter-spacing
+					imgElement3.style.fontSize = '25px'; // Use camelCase for font-size
+					imgElement3.style.right = '25px';
+					imgElement3.style.position = 'absolute'; 
+				}
+
+				
+			}
+		});
+
+		function IsPC() {
+			var userAgentInfo = navigator.userAgent;
+			var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+			var flag = true;
+			for (var v = 0; v < Agents.length; v++) {
+				if (userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
+		} 
+	</script>
+
+
+
+
+	<style>
+		#pic {
+			width: 15%;
 		}
 	</style>
-
-
-<style>
-    #pic {
-      width: 15%;
-    }
-  </style>
 	<style type="text/css">
 		.style1 {
 			font-size: 2.7em;
@@ -106,7 +116,7 @@
 
 		.style2 {
 			font-size: 1.2em;
-			color: white
+			color: rgb(177, 18, 18)
 		}
 
 		.style3 {
@@ -133,8 +143,8 @@
 
 
 	<style>
-		#content { 
-			width:850px;
+		#content {
+			width: 850px;
 			margin: 0 auto;
 		}
 
@@ -158,6 +168,7 @@
 		.style1 {
 			font-size: 2.7em;
 			font-weight: bold;
+			position: center;
 		}
 
 		.style2 {
@@ -174,15 +185,15 @@
 <body>
 	<div id="left_side">
 		<img class="left-top" src="../jpg/7.jpg">
- 	</div>
+	</div>
 
- 
+
 	<div id="content">
 		<div id="intro">
-			<h1 class="style1">資工所考試回顧</h1> 
+			<h1 class="style1">資工所考試回顧</h1>
 		</div>
 
-	 
+
 
 		<nav>
 			<ul>
