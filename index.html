@@ -131,7 +131,6 @@
 			text-shadow: 0px 0px 1px #4d4d4d;
 		}
 	</style>
-
 </head>
 
 <body onload="askUserToAdjustZoom()">
@@ -142,6 +141,11 @@
 
 
 
+	<script>
+		function reloadPage() { 
+		  location.reload();
+		}
+		</script>
 
 	<div id="content">
 
@@ -158,8 +162,8 @@
 		<nav>
 			<ul>
 				<li><a href="">首頁</a></li>
-				<li><a href="share/share2.html">資源分享</a></li>
-				<li><a href="thank/thank.html">感謝的人</a></li>
+				<li><a href="share/share2.html" onclick="reloadPage()">資源分享</a></li>
+				<li><a href="thank/thank.html" onclick="reloadPage()">感謝的人</a></li>
 			</ul>
 		</nav>
 		<main>
