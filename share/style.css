@@ -84,20 +84,7 @@ p, input, li {
     font-family: 'cwTeXYen', sans-serif;
 }
 
-/* Styles for web */
-@media screen and (min-width: 768px) {
-    li {
-        line-height: 40px;
-    }
-}
-
-/* Styles for phone */
-@media screen and (max-width: 767px) {
-   li {
-        font-size: 4rem;
-        line-height: 80px;
-    }
-}
+ 
 
 #outline {
     font-size: 2rem;
