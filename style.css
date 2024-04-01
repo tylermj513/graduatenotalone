@@ -105,12 +105,13 @@ li {
     #text {
         line-height: 40px;
     }
-} 
+}
+
 /* Styles for phone */
 @media screen and (max-width: 1000px) {
     #text {
         font-size:5rem;
-        line-height:500px;
+        line-height: 80px;
     }
 }
 
