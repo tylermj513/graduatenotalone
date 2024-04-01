@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
  
-/*#content { width: 850px; margin: 0 auto; }*/
+/*#content { width:850px; margin: 10 auto; }*/
 @font-face {
     font-family: 'PanPanZhuRouTi';
-    src: url('../panpanzhurouti.otf') format('opentype');
+    src: url('panpanzhurouti.otf') format('opentype');
 }
 h1.style1 {
     font-family: 'PanPanZhuRouTi', sans-serif; 
@@ -15,6 +15,11 @@ h1.style1 {
     text-shadow: 
         5px 5px 5px #0A0C9D, /* This sets the first layer of shadow */
         7px 7px 5px  #0A0C9D; /* This sets the second layer of shadow */
+}
+
+#outline {
+    text-align: center;
+    margin: 0 auto;
 }
 
 #intro { 
@@ -59,21 +64,17 @@ img.right-top {
     height: auto;  
     width: 182px;  
 }
-
 body {
     width: 70%;
     margin: 0 auto;
     height: 100vh; 
-    
 }
  
 h1, h2, h3 { 
     color: #2a2a2a;
 }
- 
 
 p, input, li { 
-     
     color: #2a2a2a; 
         line-height: 28px;
    
@@ -84,13 +85,20 @@ p, input, li {
     font-family: 'cwTeXYen', sans-serif;
 }
 
- 
-
-#outline {
-    font-size: 2rem;
-    text-align: center;
+/* Styles for web */
+@media screen and (min-width: 1000px) {
+    #text {
+        line-height: 40px;
+    }
 }
 
+/* Styles for phone */
+@media screen and (max-width: 1000px) {
+    #text {
+        font-size:5rem;
+        line-height: 80px;
+    }
+}
 
 h1 {
     font-size: 4rem;
@@ -109,10 +117,9 @@ h3 {
 }
 
 p, li {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.5;
 }
-/* Styles for phone */
  
 
 nav, article, aside, footer {
@@ -127,7 +134,7 @@ nav {
     margin-bottom: 10px;
 }
 
-nav ul { 
+nav ul {
     padding: 0;
     list-style-type: none;
     flex: 2;
@@ -181,12 +188,8 @@ main {
 }
 
 article {
-    flex:4;
-    font-size: 2em;  
-    line-height: 30px;
-	color: #c67b2d;
-    font-family: 'cwTeXYen', sans-serif; 
-
+    flex: 4;
+    font-size: 2rem;
 
 }
 

@@ -6,10 +6,12 @@
 
 
 	<meta charset="utf-8">
-	<title>資工所考試回顧</title>
+	<title>資工所考試回顧(建議用電腦看)</title>
+
 	<link rel="stylesheet" href="style.css">
 	<script def er src="index.js"></script>
-	<!--
+	<!--<link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="style.css" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 -->
@@ -47,8 +49,8 @@
 
 				function askUserToAdjustZoom() {
 					var currentZoom = detectZoom();
-					if (currentZoom !== 1.25) { // Assuming 1.25 is the default zoom ratio for PC
-						adjustPageZoom();
+					if (currentZoom !== 1.25) { 
+							adjustPageZoom();
 					}
 				}
 
@@ -67,24 +69,7 @@
  
 				}
 			} else {
-
-				var content = document.getElementById("content");
-				content.style.width = "900px";
-				content.style.position = "absolute";
-				content.style.left = "10px";
-				content.style.margin = "0 auto";
-				content.style.float = "left";
-
-				var imgElement = document.querySelector('.left-top');
-				var imgElement2 = document.querySelector('.right-top');
-				var imgElement3 = document.querySelector('.style1');
  
-				if (imgElement) { 
-					imgElement.style.width = '60px';
-					imgElement2.style.width = '60px';
-					imgElement3.style.letterSpacing = '20px'; // Use camelCase for letter-spacing
-					imgElement3.style.fontSize = '25px'; // Use camelCase for font-size
-  				}
 
 				
 			}
@@ -110,7 +95,7 @@
 			position: absolute;
 
 			float: left;
-			width: 35px;
+			width: 100px;
 			left: 0px;
 		}
 
@@ -146,21 +131,12 @@
 			text-shadow: 0px 0px 1px #4d4d4d;
 		}
 	</style>
-
-	<style>
-		outline {
-			font-size: 3rem;
-			text-align: center;
-		}
-	</style>
-
-
 </head>
 
 <body onload="askUserToAdjustZoom()">
+
 	<div id="left_side">
-		<img class="left-top" src="../jpg/5.png">
-		<p style="color: lightskyblue;">魔鬼藏在細節裡 真的不要鬼遮眼</p>
+		<img class="left-top" src="../jpg/7.jpg">
 	</div>
 
 
@@ -183,11 +159,7 @@
 			</ul>
 		</nav>
 		<main>
-
-
-
-			 
-			<article>
+			<article> <!---->
 
 				<div id="outline">
 					<a href="#eng">原文</a>
@@ -947,8 +919,9 @@ https://hackmd.io/@25077667/os-final
 		</footer>
 	</div>
 
+
 	<div id="right_side">
-		<img class="right-top" src="../jpg/6.png">
+		<img class="right-top" src="../jpg/8.jpg">
 	</div>
 </body>
 

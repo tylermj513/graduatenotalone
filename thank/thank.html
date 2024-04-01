@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
+
+
 	<meta charset="utf-8">
-	<title>資工所考試回顧</title>
+	<title>資工所考試回顧(建議用電腦看)</title>
+
 	<link rel="stylesheet" href="style.css">
 	<script def er src="index.js"></script>
-	<!--
+	<!--<link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="style.css" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 -->
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 	<script>
 		$(document).ready(function () {
@@ -43,11 +50,14 @@
 				function askUserToAdjustZoom() {
 					var currentZoom = detectZoom();
 					if (currentZoom !== 1.25) { // Assuming 1.25 is the default zoom ratio for PC
-						adjustPageZoom();
+						if (confirm(confirmMessage)) {
+							adjustPageZoom();
+						}
 					}
 				}
 
-				window.onload = askUserToAdjustZoom; var content = document.getElementById("content");
+				window.onload = askUserToAdjustZoom;
+				var content = document.getElementById("content");
 				content.style.width = "850px";
 				content.style.margin = "0 auto"; 
 
@@ -61,13 +71,7 @@
  
 				}
 			} else {
-
-				var content = document.getElementById("content");
-				content.style.width = "900px";
-				content.style.position = "absolute";
-				content.style.left = "10px";
-				content.style.margin = "0 auto";
-				content.style.float = "left"; 
+ 
 
 				
 			}
@@ -88,8 +92,22 @@
 	</script>
 
 
+	<style>
+		#left_side {
+			position: absolute;
 
+			float: left;
+			width: 100px;
+			left: 0px;
+		}
 
+		#right_side {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 180px;
+		}
+	</style>
 	<style>
 		#pic {
 			width: 15%;
@@ -103,73 +121,22 @@
 
 		.style2 {
 			font-size: 1.2em;
-			color: rgb(177, 18, 18)
+			color: white
 		}
 
 		.style3 {
 			font-size: 1.65em
 		}
 	</style>
-
-
 	<style>
-		.hidden-text {
-			display: none;
-		}
-
-		.footer:hover .hidden-text {
-			display: block;
-		}
-
-
-		#pic {
-			width: 15%;
-			background-size: contain;
-		}
-	</style>
-
-
-	<style>
-		#content {
-			width: 850px;
-			margin: 0 auto;
-		}
-
-
-		#left_side {
-			position: static;
-
-			float: left;
-			width: 100px;
-			left: 0px;
-		}
-
-		#right_side {
-			position: static;
-			right: 0;
-			top: 0;
-			width: 180px;
-		}
-	</style>
-	<style type="text/css">
-		.style1 {
-			font-size: 2.7em;
-			font-weight: bold;
-			position: center;
-		}
-
-		.style2 {
-			font-size: 1.2em
-		}
-
-		.style3 {
-			font-size: 1.65em
+		.shadow-text {
+			text-shadow: 0px 0px 1px #4d4d4d;
 		}
 	</style>
 </head>
 
+<body onload="askUserToAdjustZoom()">
 
-<body>
 	<div id="left_side">
 		<img class="left-top" src="../jpg/7.jpg">
 	</div>

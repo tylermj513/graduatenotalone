@@ -1,51 +1,39 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
-
+ 
 /*#content { width:850px; margin: 10 auto; }*/
 @font-face {
     font-family: 'PanPanZhuRouTi';
     src: url('panpanzhurouti.otf') format('opentype');
 }
-
 h1.style1 {
-    font-family: 'PanPanZhuRouTi', sans-serif;
-    letter-spacing: 25px;
-    font-size: 40px;
-    color: #ffffff;
-    -webkit-text-stroke-width: thin;
-    /* This sets the width of the stroke around the text */
-    -webkit-text-stroke-color: #BA1928;
-    /* This sets the color of the stroke around the text (for Safari and Chrome) */
-    text-shadow:
-        5px 5px 5px #0A0C9D,
-        /* This sets the first layer of shadow */
-        7px 7px 5px #0A0C9D;
-    /* This sets the second layer of shadow */
+    font-family: 'PanPanZhuRouTi', sans-serif; 
+    letter-spacing: 25px; 
+    font-size: 40px;     
+    color:#ffffff;
+    -webkit-text-stroke-width:thin; /* This sets the width of the stroke around the text */
+    -webkit-text-stroke-color:#BA1928; /* This sets the color of the stroke around the text (for Safari and Chrome) */ 
+    text-shadow: 
+        5px 5px 5px #0A0C9D, /* This sets the first layer of shadow */
+        7px 7px 5px  #0A0C9D; /* This sets the second layer of shadow */
 }
 
 
-#intro {
-    clear: both;
-    background: #fff url(jpg/spi.jpeg) no-repeat;
+#intro { 
+	clear: both;
+	background: #fff url(jpg/spi.jpeg) no-repeat;
     background-position: center;
-    background-size: cover;
-    color: #863487;
-    height: 60px;
-    margin: 0 0 20px;
-    padding: 45px 40px 0 0;
-    text-align: right;
+    background-size: cover; 
+	color: #863487;
+	height:60px;
+	margin: 0 0 20px;
+	padding: 45px 40px 0 0;
+	text-align: right;
 }
-
-#intro h1 {
-    margin: 0;
-}
-
-#intro p {
-    margin: 0;
-}
+#intro h1 { margin: 0; }
+#intro p { margin: 0; }
 
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
 }
@@ -54,14 +42,14 @@ html {
     font-size: 10px;
     background-color: lightskyblue;
 }
+ 
 
-
-img.left-top {
+img.left-top { 
     position: absolute;
     top: 0;
     left: 0;
-    height: auto;
-    width: 182px;
+    height: auto;  
+    width: 182px;  
     z-index: 999;
 }
 
@@ -69,33 +57,26 @@ img.right-top {
     position: absolute;
     top: 0;
     right: 0;
-    height: auto;
-    width: 182px;
+    height: auto;  
+    width: 182px;  
 }
-
 body {
     width: 70%;
     margin: 0 auto;
-    height: 100vh;
+    height: 100vh; 
 }
-
-h1,
-h2,
-h3 {
+ 
+h1, h2, h3 { 
     color: #2a2a2a;
 }
 
-p,
-input,
-li {
-    color: #2a2a2a;
-    line-height: 28px;
-
-    font-family: 'cwTeXYen', sans-serif;
-
+p, input, li { 
+    color: #2a2a2a; 
+        line-height: 28px;
+   
+	font-family: 'cwTeXYen', sans-serif; 
+    
 }
-
-/* Default styles */
 #text {
     font-family: 'cwTeXYen', sans-serif;
 }
@@ -115,8 +96,6 @@ li {
     }
 }
 
-
-
 h1 {
     font-size: 4rem;
     text-align: center;
@@ -133,17 +112,13 @@ h3 {
     font-size: 2.2rem;
 }
 
-p,
-li {
+p, li {
     font-size: 1.6rem;
     line-height: 1.5;
 }
+ 
 
-
-nav,
-article,
-aside,
-footer {
+nav, article, aside, footer {
     background-color: white;
     padding: 1%;
 }
@@ -160,7 +135,7 @@ nav ul {
     list-style-type: none;
     flex: 2;
     display: flex;
-
+	 
 }
 
 nav li {
@@ -226,5 +201,7 @@ aside li {
 
 footer {
     margin-top: 10px;
-
+	 
 }
+
+ 
