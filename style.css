@@ -98,7 +98,8 @@ h3 {
     font-size: 2.2rem;
 }
 
-p, li { 
+p, li {
+    font-size:3rem;
     line-height: 1.5;
 }
  
