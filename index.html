@@ -88,7 +88,7 @@
 				var imgElement = document.querySelector('.left-top');
 				var imgElement2 = document.querySelector('.right-top');
 				var imgElement3 = document.querySelector('.style1');
-				var fontstyle = document.querySelectorAll('#text');
+				var testElement = document.getElementById('test'); // Select the element with id 'test'
 
 				if (imgElement) {
 					imgElement.style.width = '60px';
@@ -97,6 +97,9 @@
 					imgElement3.style.fontSize = '25px'; // Use camelCase for font-size
  					fontstyle.style.fontSize = '4rem';
 					fontstyle.style.lineHeight = '70px';
+					testElement.style.fontSize = '10rem'; // Change font size to 10rem for #test
+					testElement.style.lineHeight = '70px'; // You can set lineHeight if needed
+
 				}
 
 
