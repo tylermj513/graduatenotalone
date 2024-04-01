@@ -21,6 +21,14 @@
 
 	<script>
 		$(document).ready(function () {
+
+			// Get the device width
+var deviceWidth = window.innerWidth;
+
+// Display an alert with the device width
+alert("Device Width: " + deviceWidth + " pixels");
+
+
 			if (IsPC()) {
 				function detectZoom() {
 					var ratio = 0,
