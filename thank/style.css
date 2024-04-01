@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
  
-/*#content { width:850px; margin: 10 auto; }*/
+
+
+
+/*#content { width: 850px; margin: 0 auto; }*/
+
 @font-face {
     font-family: 'PanPanZhuRouTi';
-    src: url('panpanzhurouti.otf') format('opentype');
+    src: url('../panpanzhurouti.otf') format('opentype');
 }
 h1.style1 {
     font-family: 'PanPanZhuRouTi', sans-serif; 
@@ -24,7 +28,7 @@ h1.style1 {
     background-position: center;
     background-size: cover; 
 	color: #863487;
-	height:60px;
+	height:60px; 
 	margin: 0 0 20px;
 	padding: 45px 40px 0 0;
 	text-align: right;
@@ -44,7 +48,7 @@ html {
 }
  
 
-img.left-top { 
+img.left-top {
     position: absolute;
     top: 0;
     left: 0;
@@ -60,6 +64,7 @@ img.right-top {
     height: auto;  
     width: 182px;  
 }
+
 body {
     width: 70%;
     margin: 0 auto;
@@ -70,29 +75,9 @@ h1, h2, h3 {
     color: #2a2a2a;
 }
 
-
-
-@media screen and (max-width:1000px) {
-
-    main p {
-         color:#000000;/* phone**
-        font-size: 1.2em; /* 设置字体大小为1.5倍 */
-        line-height: 80px; 
-    }
-    }
-@media screen and (max-width:1000px) {
-
-    main li {
-         color:#000000; 
-        font-size: 1.2em; /* 设置字体大小为1.5倍 */
-        line-height: 80px; 
-    }
-    }
-    
-
 p, input, li { 
-    color: #000000; 
-        line-height: 42px;
+    color: #2a2a2a; 
+        line-height: 28px;
    
 	font-family: 'cwTeXYen', sans-serif; 
     
@@ -102,19 +87,13 @@ p, input, li {
 }
 
 /* Styles for web */
-@media screen and (min-width: 1000px) {
-    #li {
-        line-height: 40px; 
+@media screen and (min-width: 768px) {
+    #text {
+        line-height: 40px;
     }
 }
 
-/* Styles for phone */
-@media screen and (max-width: 1000px) {
-    #li {
-        font-size:5rem;
-        line-height: 80px; 
-    }
-}
+
 
 h1 {
     font-size: 4rem;
@@ -131,7 +110,23 @@ h2 {
 h3 {
     font-size: 2.2rem;
 }
-    
+
+p, li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color:#000000;
+}
+
+
+/* Styles for phone */
+@media screen and (max-width:1000px) {
+
+    main li {
+        color:#000000;
+        font-size: 1.5em; /* 设置字体大小为1.5倍 */
+    }
+    }
+
 
 nav, article, aside, footer {
     background-color: white;
