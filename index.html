@@ -17,8 +17,7 @@
 -->
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
+ 
 	<script>
 		$(document).ready(function () {
 			if (IsPC()) {
@@ -62,17 +61,21 @@
 				window.onload = askUserToAdjustZoom;
 				var content = document.getElementById("content");
 				content.style.width = "850px";
-				content.style.margin = "0 auto"; 
+				content.style.margin = "0 auto";
 
 
 				var imgElement3 = document.querySelector('.style1');
- 
-				if (imgElement3) { 
-				 
+
+
+
+				if (imgElement3) {
 					imgElement3.style.letterSpacing = '25px';
-					imgElement3.style.fontSize = '40px';  
- 
+					imgElement3.style.fontSize = '40px';
+
 				}
+ 
+
+
 			} else {
 
 				var content = document.getElementById("content");
@@ -85,17 +88,18 @@
 				var imgElement = document.querySelector('.left-top');
 				var imgElement2 = document.querySelector('.right-top');
 				var imgElement3 = document.querySelector('.style1');
- 
-				if (imgElement) { 
+				var fontstyle = document.querySelectorAll('#text');
+
+				if (imgElement) {
 					imgElement.style.width = '60px';
 					imgElement2.style.width = '60px';
 					imgElement3.style.letterSpacing = '20px'; // Use camelCase for letter-spacing
 					imgElement3.style.fontSize = '25px'; // Use camelCase for font-size
-					/*imgElement3.style.right = '25px';*/
-					imgElement3.style.position = 'absolute'; 
+ 					fontstyle.style.fontSize = '4rem';
+					fontstyle.style.lineHeight = '70px';
 				}
 
-				
+
 			}
 		});
 

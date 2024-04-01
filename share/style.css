@@ -81,11 +81,23 @@ p, input, li {
     
 }
 #text {
-    
-    line-height: 28px;
-	  font-family: 'cwTeXYen', sans-serif;
+    font-family: 'cwTeXYen', sans-serif;
 }
 
+/* Styles for web */
+@media screen and (min-width: 768px) {
+    li {
+        line-height: 40px;
+    }
+}
+
+/* Styles for phone */
+@media screen and (max-width: 767px) {
+   li {
+        font-size: 4rem;
+        line-height: 80px;
+    }
+}
 
 #outline {
     font-size: 2rem;
@@ -113,7 +125,15 @@ p, li {
     font-size: 2rem;
     line-height: 1.5;
 }
- 
+/* Styles for phone */
+@media screen and (max-width: 767px) {
+
+    main li {
+        font-size: 1.5em; /* 设置字体大小为1.5倍 */
+        line-height: 2.5;
+    }
+    }
+
 
 nav, article, aside, footer {
     background-color: white;

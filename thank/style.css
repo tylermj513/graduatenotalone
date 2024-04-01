@@ -83,8 +83,22 @@ p, input, li {
     
 }
 #text {
-    line-height: 28px;
-	  font-family: 'cwTeXYen', sans-serif;
+    font-family: 'cwTeXYen', sans-serif;
+}
+
+/* Styles for web */
+@media screen and (min-width: 768px) {
+    #text {
+        line-height: 40px;
+    }
+}
+
+/* Styles for phone */
+@media screen and (max-width: 767px) {
+    #text {
+        font-size: 4rem;
+        line-height: 80px;
+    }
 }
 
 h1 {
@@ -107,7 +121,16 @@ p, li {
     font-size: 1.6rem;
     line-height: 1.5;
 }
- 
+
+
+/* Styles for phone */
+@media screen and (max-width: 767px) {
+
+    main li {
+        font-size: 1.5em; /* 设置字体大小为1.5倍 */
+    }
+    }
+
 
 nav, article, aside, footer {
     background-color: white;
