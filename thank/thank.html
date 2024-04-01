@@ -22,9 +22,9 @@
 	<script>
 		// 定義一個全局變數來儲存瀏覽次數
 		let 瀏覽次數 = 0;
-		
+
 		// 當頁面加載完成時，獲取之前的瀏覽次數
-		window.onload = function() {
+		window.onload = function () {
 			// 如果瀏覽次數存在於本地存儲中，則將其讀取出來
 			if (localStorage.getItem('瀏覽次數_page1')) {
 				瀏覽次數 = parseInt(localStorage.getItem('瀏覽次數_page1'));
@@ -32,7 +32,7 @@
 			// 更新顯示的瀏覽次數
 			更新瀏覽次數();
 		}
-		
+
 		// 點擊計數函數
 		function 點擊計數() {
 			// 每次點擊時，增加瀏覽次數
@@ -42,12 +42,12 @@
 			// 更新顯示的瀏覽次數
 			更新瀏覽次數();
 		}
-		
+
 		// 更新顯示的瀏覽次數
 		function 更新瀏覽次數() {
 			document.getElementById('瀏覽次數').innerText = '瀏覽次數：' + 瀏覽次數;
 		}
-		</script>
+	</script>
 	<style>
 		.hidden-text {
 			display: none;
@@ -56,7 +56,6 @@
 		.footer:hover .hidden-text {
 			display: block;
 		}
- 
 	</style>
 
 	<script>
@@ -99,21 +98,21 @@
 				window.onload = askUserToAdjustZoom;
 				var content = document.getElementById("content");
 				content.style.width = "850px";
-				content.style.margin = "0 auto"; 
+				content.style.margin = "0 auto";
 
 
 				var imgElement3 = document.querySelector('.style1');
- 
-				if (imgElement3) { 
-				 
+
+				if (imgElement3) {
+
 					imgElement3.style.letterSpacing = '25px';
-					imgElement3.style.fontSize = '40px';  
- 
+					imgElement3.style.fontSize = '40px';
+
 				}
 			} else {
- 
 
-				
+
+
 			}
 		});
 
@@ -191,10 +190,10 @@
 
 		<nav>
 			<ul>
-				<li><a href="../index.html"onclick="點擊計數();">首頁</a></li>
-				<li><a href="../share/share2.html"onclick="點擊計數();">九陽真經
-				</a></li>
-				<li><a href=""onclick="點擊計數();">感謝的人</a></li>
+				<li><a href="../index.html" onclick="點擊計數();">首頁</a></li>
+				<li><a href="../share/share2.html" onclick="點擊計數();">九陽真經
+					</a></li>
+				<li><a href="" onclick="點擊計數();">感謝的人</a></li>
 			</ul>
 		</nav>
 		<main>
@@ -260,31 +259,54 @@
 				<li>
 					謝謝老師的教導，從老師身上學到很多事情，不論是學科方面的還是關於未來的人生態度以及數也數不完的茶餘飯後的八卦。也對於老師自己所說的即使只有三個學生來上課依舊當作是千軍萬馬來教書，老師有著如此的教學熱忱真的很值得我們學習。老師也總是自己說自己沒有料是個爛貨製造機，但在我心目中以及許多學生的眼裡，老師一直以來都是個教學認真也幽默的師長。也謝謝老師不論無時無刻都願意讓學生去找您問問題，真的鮮少在大學期間遇到如此會教學還對學生如此關切的師長，謝謝王道~
 				</li>
+				 
 				<div style="white-space: nowrap;">
 					<img src="z.png" width="20%">
 					<img src="3.jpg" width="20%">
 					<img src="2.png" width="20%">
 					<img src="2.jpg" width="20%">
-					<img src="gingle.jpg" width="16%">
+					<img id="imageToChange" src="gingle.jpg" width="16%" onmouseover="changeImage()"
+						onmouseout="restoreImage()">
+					<img src="mj.png" id="newImage" style="display: none;" width="16%">
+ 
 				</div>
+
+				<script>
+					var timeoutID;
+
+					function changeImage() {
+						clearTimeout(timeoutID);
+						document.getElementById("imageToChange").style.display = "none";
+						document.getElementById("newImage").style.display = "inline";
+						timeoutID = setTimeout(restoreImage, 100); // 1 second delay 
+					}
+
+					function restoreImage() {
+						document.getElementById("imageToChange").style.display = "inline";
+						document.getElementById("newImage").style.display = "none"; 
+					}
+				</script>
 
 
 			</article>
 		</main>
 
 		<footer class="footer">
-			<p>TylerMJ</p> 
- 
+			<p>TylerMJ</p>
 
- 
+
+
 			<p class="hidden-text">還有謝謝mj 開學的那則訊息給了我力量去面對 雖然不知道你現在過得如何 但希望我們都能夠快快樂樂地 活成自己想要的樣子</p>
-				</footer>
+		</footer>
 
 	</div>
 
-	<a href="https://www.hitwebcounter.com" target="https://tylermj513.github.io/graduatenotalone/" class="hidden-text">
-				
-		<img src="https://hitwebcounter.com/counter/counter.php?page=12403027&style=0006&nbdigits=1&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>                                    
+
+
+	<a href="https://www.hitwebcounter.com" target="https://tylermj513.github.io/graduatenotalone/">
+		<img src="https://hitwebcounter.com/counter/counter.php?page=12403747&style=0006&nbdigits=1&type=page&initCount=1" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>       
+
+
 
 	<div id="right_side">
 		<img class="right-top" src="../jpg/8.jpg">
