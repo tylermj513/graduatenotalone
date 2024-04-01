@@ -111,7 +111,7 @@ li {
 @media screen and (max-width: 1000px) {
     #text {
         font-size:5rem;
-        line-height: 200px;
+        line-height: 80px;
     }
 }
 
