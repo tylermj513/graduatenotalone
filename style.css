@@ -103,7 +103,6 @@ li {
 /* Styles for web */
 @media screen and (min-width: 1000px) {
     #text {
-        font-size:100rem;
         line-height: 40px;
     }
 }
@@ -111,7 +110,7 @@ li {
 /* Styles for phone */
 @media screen and (max-width: 1000px) {
     #text {
-        font-size:10rem;
+        font-size:5rem;
         line-height: 80px;
     }
 }
