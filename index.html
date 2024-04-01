@@ -18,7 +18,6 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
 	<script>
 		$(document).ready(function () {
 			if (IsPC()) {
@@ -62,21 +61,25 @@
 				window.onload = askUserToAdjustZoom;
 				var content = document.getElementById("content");
 				content.style.width = "850px";
-				content.style.margin = "0 auto"; 
+				content.style.margin = "0 auto";
 
 
 				var imgElement3 = document.querySelector('.style1');
- 
-				if (imgElement3) { 
-				 
+
+
+
+				if (imgElement3) {
 					imgElement3.style.letterSpacing = '25px';
-					imgElement3.style.fontSize = '40px';  
- 
+					imgElement3.style.fontSize = '40px';
+
 				}
+
+
+
 			} else {
 
 				var content = document.getElementById("content");
-				content.style.width = "370px";
+				content.style.width = "900px";
 				content.style.position = "absolute";
 				content.style.left = "10px";
 				content.style.margin = "0 auto";
@@ -85,17 +88,21 @@
 				var imgElement = document.querySelector('.left-top');
 				var imgElement2 = document.querySelector('.right-top');
 				var imgElement3 = document.querySelector('.style1');
- 
-				if (imgElement) { 
+				var testElement = document.getElementById('text'); // Select the element with id 'test'
+
+
+
+				if (imgElement) {
 					imgElement.style.width = '60px';
 					imgElement2.style.width = '60px';
 					imgElement3.style.letterSpacing = '20px'; // Use camelCase for letter-spacing
 					imgElement3.style.fontSize = '25px'; // Use camelCase for font-size
-					imgElement3.style.right = '25px';
-					imgElement3.style.position = 'absolute'; 
-				}
+					fontstyle.style.fontSize = '4rem';
+					fontstyle.style.lineHeight = '70px';
+					testElement.style.fontSize = '5rem'; // Change font size to 10rem for #test
+					testElement.style.lineHeight = '300px'; // You can set lineHeight if needed
 
-				
+				}
 			}
 		});
 
@@ -110,7 +117,7 @@
 				}
 			}
 			return flag;
-		} 
+		}
 	</script>
 
 
@@ -153,7 +160,14 @@
 	<style>
 		.shadow-text {
 			text-shadow: 0px 0px 1px #4d4d4d;
+
 		}
+		@media screen and (max-width: 1000px) {
+        .shadow-text {
+            font-size: 5rem;
+            line-height: 80px;
+        }
+    }
 	</style>
 </head>
 

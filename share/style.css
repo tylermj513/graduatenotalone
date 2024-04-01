@@ -126,7 +126,7 @@ p, li {
     line-height: 1.5;
 }
 /* Styles for phone */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
 
     main li {
         font-size: 1.5em; /* 设置字体大小为1.5倍 */
