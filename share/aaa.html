@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page 1 - 點擊計數器</title>
+<script>
+// 當頁面加載完成時，獲取之前的瀏覽次數並增加
+window.onload = function() {
+    // 如果瀏覽次數存在於本地存儲中，則將其讀取出來
+    let 瀏覽次數 = localStorage.getItem('瀏覽次數_page1') ? parseInt(localStorage.getItem('瀏覽次數_page1')) : 0;
+    // 增加瀏覽次數
+    瀏覽次數++;
+    // 將瀏覽次數保存到本地存儲中
+    localStorage.setItem('瀏覽次數_page1', 瀏覽次數);
+    // 更新顯示的瀏覽次數
+    document.getElementById('瀏覽次數').innerText = '瀏覽次數：' + 瀏覽次數;
+}
+</script>
+</head>
+<body>
+
+<!-- 顯示瀏覽次數 -->
+<p id="瀏覽次數"></p>
+
+</body>
+</html>

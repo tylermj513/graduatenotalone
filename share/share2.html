@@ -18,7 +18,14 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
+	<script> 
+		window.onload = function() { 
+			let 瀏覽次數 = localStorage.getItem('瀏覽次數_page1') ? parseInt(localStorage.getItem('瀏覽次數_page1')) : 0; 
+			瀏覽次數++; 
+			localStorage.setItem('瀏覽次數_page1', 瀏覽次數); 
+			document.getElementById('瀏覽次數').innerText = '瀏覽次數：' + 瀏覽次數;
+		}
+		</script>
 	<script>
 		$(document).ready(function () {
 			if (IsPC()) {
@@ -141,7 +148,7 @@
 
 
 	<div id="content">
-
+ 
 		<div id="intro">
 			<h1 class="style1">資工所考試回顧</h1>
 		</div>
@@ -152,9 +159,9 @@
 
 		<nav>
 			<ul>
-				<li><a href="../index.html">首頁</a></li>
-				<li><a href="">資源分享</a></li>
-				<li><a href="../thank/thank.html">感謝的人</a></li>
+				<li><a href="../index.html" onclick="點擊計數();"> 首頁</a></li>
+				<li><a href=""onclick="點擊計數();">資源分享</a></li>
+				<li><a href="../thank/thank.html"onclick="點擊計數();">感謝的人</a></li>
 				</li>
 			</ul>
 		</nav>
@@ -911,7 +918,13 @@ https://hackmd.io/@25077667/os-final
 			</article>
 		</main>
 		<footer>
-			<a href=" https://miro.com/app/board/uXjVP200ync=/?share_link_id=370763437742"
+  
+			<div>Website visit count:</div>
+
+			<a href="https://www.hitwebcounter.com" target="https://tylermj513.github.io/graduatenotalone/">
+				<img src="https://hitwebcounter.com/counter/counter.php?page=12403027&style=0006&nbdigits=1&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>                                    
+				
+					<a href=" https://miro.com/app/board/uXjVP200ync=/?share_link_id=370763437742"
 				style="text-decoration:none;">
 				<p>TylerMJ</p>
 			</a>

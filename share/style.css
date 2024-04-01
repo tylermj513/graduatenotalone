@@ -3,7 +3,7 @@
 /*#content { width:850px; margin: 10 auto; }*/
 @font-face {
     font-family: 'PanPanZhuRouTi';
-    src: url('panpanzhurouti.otf') format('opentype');
+    src: url('../panpanzhurouti.otf') format('opentype');
 }
 h1.style1 {
     font-family: 'PanPanZhuRouTi', sans-serif; 

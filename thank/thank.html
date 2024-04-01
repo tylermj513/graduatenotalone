@@ -17,6 +17,37 @@
 -->
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+	<script>
+		// 定義一個全局變數來儲存瀏覽次數
+		let 瀏覽次數 = 0;
+		
+		// 當頁面加載完成時，獲取之前的瀏覽次數
+		window.onload = function() {
+			// 如果瀏覽次數存在於本地存儲中，則將其讀取出來
+			if (localStorage.getItem('瀏覽次數_page1')) {
+				瀏覽次數 = parseInt(localStorage.getItem('瀏覽次數_page1'));
+			}
+			// 更新顯示的瀏覽次數
+			更新瀏覽次數();
+		}
+		
+		// 點擊計數函數
+		function 點擊計數() {
+			// 每次點擊時，增加瀏覽次數
+			瀏覽次數++;
+			// 將瀏覽次數保存到本地存儲中
+			localStorage.setItem('瀏覽次數_page1', 瀏覽次數);
+			// 更新顯示的瀏覽次數
+			更新瀏覽次數();
+		}
+		
+		// 更新顯示的瀏覽次數
+		function 更新瀏覽次數() {
+			document.getElementById('瀏覽次數').innerText = '瀏覽次數：' + 瀏覽次數;
+		}
+		</script>
 	<style>
 		.hidden-text {
 			display: none;
@@ -160,9 +191,9 @@
 
 		<nav>
 			<ul>
-				<li><a href="../index.html">首頁</a></li>
-				<li><a href="../share/share2.html">資源分享</a></li>
-				<li><a href="">感謝的人</a></li>
+				<li><a href="../index.html"onclick="點擊計數();">首頁</a></li>
+				<li><a href="../share/share2.html"onclick="點擊計數();">資源分享</a></li>
+				<li><a href=""onclick="點擊計數();">感謝的人</a></li>
 			</ul>
 		</nav>
 		<main>
@@ -238,12 +269,18 @@
 		</main>
 
 		<footer class="footer">
-			<p>TylerMJ</p>
+			<p>TylerMJ</p> 
+ 
+
+ 
 			<p class="hidden-text">還有謝謝mj 開學的那則訊息給了我力量去面對 雖然不知道你現在過得如何 但希望我們都能夠快快樂樂地 活成自己想要的樣子</p>
-		</footer>
+				</footer>
 
 	</div>
 
+	<a href="https://www.hitwebcounter.com" target="https://tylermj513.github.io/graduatenotalone/" class="hidden-text">
+				
+		<img src="https://hitwebcounter.com/counter/counter.php?page=12403027&style=0006&nbdigits=1&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>                                    
 
 	<div id="right_side">
 		<img class="right-top" src="../jpg/8.jpg">
