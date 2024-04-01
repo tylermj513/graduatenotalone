@@ -110,8 +110,8 @@ li {
 /* Styles for phone */
 @media screen and (max-width: 767px) {
     #text {
-        font-size:10rem;
-        line-height: 80px;
+        font-size:5rem;
+        line-height:500px;
     }
 }
 

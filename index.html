@@ -17,7 +17,7 @@
 -->
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- 
+
 	<script>
 		$(document).ready(function () {
 			if (IsPC()) {
@@ -73,7 +73,7 @@
 					imgElement3.style.fontSize = '40px';
 
 				}
- 
+
 
 
 			} else {
@@ -88,21 +88,18 @@
 				var imgElement = document.querySelector('.left-top');
 				var imgElement2 = document.querySelector('.right-top');
 				var imgElement3 = document.querySelector('.style1');
-				var testElement = document.getElementById('test'); // Select the element with id 'test'
+				var testElement = document.getElementById('text'); // Select the element with id 'test'
 
 				if (imgElement) {
 					imgElement.style.width = '60px';
 					imgElement2.style.width = '60px';
 					imgElement3.style.letterSpacing = '20px'; // Use camelCase for letter-spacing
 					imgElement3.style.fontSize = '25px'; // Use camelCase for font-size
- 					fontstyle.style.fontSize = '4rem';
+					fontstyle.style.fontSize = '4rem';
 					fontstyle.style.lineHeight = '70px';
-					testElement.style.fontSize = '10rem'; // Change font size to 10rem for #test
-					testElement.style.lineHeight = '70px'; // You can set lineHeight if needed
-
+					testElement.style.fontSize = '5rem'; // Change font size to 10rem for #test
+					testElement.style.lineHeight = '300px'; // You can set lineHeight if needed
 				}
-
-
 			}
 		});
 
@@ -117,7 +114,16 @@
 				}
 			}
 			return flag;
-		} 
+		}
+		if (!IsPC()) {
+			var element = document.getElementById('text');
+			if (element) {
+				element.style.fontSize = '5rem';
+				element.style.lineHeight = '500px';
+				alert("你好");
+			}
+		}
+
 	</script>
 
 
