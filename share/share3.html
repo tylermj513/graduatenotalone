@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+	<meta charset="utf-8">
+	<title>資工所考試回顧(建議用電腦看)</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script def er src="index.js"></script>
+	<!--<link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="style.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+-->
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .white-text {
+            color: white;          font-size: 14px; /* 調整字體大小為14像素 */
+
+        }
+    </style>
+	<script>
+		window.onload = function () {
+			let 瀏覽次數 = localStorage.getItem('瀏覽次數_page1') ? parseInt(localStorage.getItem('瀏覽次數_page1')) : 0;
+			瀏覽次數++;
+			localStorage.setItem('瀏覽次數_page1', 瀏覽次數);
+			document.getElementById('瀏覽次數').innerText = '瀏覽次數：' + 瀏覽次數;
+		}
+	</script>
+	<script>
+		$(document).ready(function () {
+			if (IsPC()) {
+				function detectZoom() {
+					var ratio = 0,
+						screen = window.screen,
+						ua = navigator.userAgent.toLowerCase();
+
+					if (ua.indexOf('firefox') != -1) {
+						if (window.devicePixelRatio !== undefined) {
+							ratio = window.devicePixelRatio;
+						}
+					} else if (ua.indexOf('msie') != -1) {
+						if (screen.deviceXDPI && screen.logicalXDPI) {
+							ratio = screen.deviceXDPI / screen.logicalXDPI;
+						}
+					} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+						ratio = window.outerWidth / window.innerWidth;
+					}
+					return ratio;
+				}
+
+				function adjustPageZoom() {
+					var zoomRatio = detectZoom();
+					var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
+					document.body.style.zoom = string;
+				}
+
+				function askUserToAdjustZoom() {
+					var currentZoom = detectZoom();
+					if (currentZoom !== 1.25) {
+						adjustPageZoom();
+					}
+				}
+
+				window.onload = askUserToAdjustZoom;
+				var content = document.getElementById("content");
+				content.style.width = "850px";
+				content.style.margin = "0 auto";
+
+
+				var imgElement3 = document.querySelector('.style1');
+
+				if (imgElement3) {
+
+					imgElement3.style.letterSpacing = '25px';
+					imgElement3.style.fontSize = '40px';
+
+				}
+			} else {
+
+
+
+			}
+		});
+
+		function IsPC() {
+			var userAgentInfo = navigator.userAgent;
+			var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+			var flag = true;
+			for (var v = 0; v < Agents.length; v++) {
+				if (userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
+		} 
+	</script>
+
+
+	<style>
+		#left_side {
+			position: absolute;
+
+			float: left;
+			width: 100px;
+			left: 0px;
+		}
+
+		#right_side {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 180px;
+		}
+	</style>
+	<style>
+		#pic {
+			width: 15%;
+		}
+	</style>
+	<style type="text/css">
+		.style1 {
+			font-size: 2.7em;
+			font-weight: bold;
+		}
+
+		.style2 {
+			font-size: 1.2em;
+			color: white
+		}
+
+		.style3 {
+			font-size: 1.65em
+		}
+	</style>
+	<style>
+		.shadow-text {
+			text-shadow: 0px 0px 1px #4d4d4d;
+		}
+	</style>
+
+<style>
+    /* 將文本顏色設置為灰色 */
+    .grey-text {
+        color: rgba(255, 255, 255, 0.943);
+    }
+</style>
+ 
+</head>
+
+<body onload="askUserToAdjustZoom()">
+
+	<div id="left_side">
+		<img class="left-top" src="../jpg/5.png">
+		<p style="margin-top: 120px; color: lightskyblue; writing-mode: vertical-rl; writing-mode: vertical-rl; ;">
+			魔鬼藏在細節裡 真的不要鬼遮眼</p>
+	</div>
+
+
+	<div id="content">
+
+		<div id="intro">
+			<h1 class="style1">資工所考試回顧</h1>
+		</div>
+
+
+
+		<!-- <img id="pic" class="right-top" src="../jpg/6.png">-->
+
+		<nav>
+			<ul>
+				<li><a href="../index.html" onclick="點擊計數();"> 首頁</a></li>
+				<li><a href="" onclick="點擊計數();">九陽真經
+					</a></li>
+				<li><a href="../thank/thank.html" onclick="點擊計數();">感謝的人</a></li>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<article>
+				<section>
+					<h5>簡章</h5>
+					<p>
+						明年年後考試 各位辛苦了 </p>
+					<p> 中央的考試時間可以看育達高中的行事曆 大概暑假那時就會公布<a href="https://yd-main.web.app/main/pages/calendar">link</a></p>
+					<p>中山的考試時間要看【當年度教務行事曆】 <a href="https://oaa.nsysu.edu.tw/p/412-1003-98.php?Lang=zh-tw">link</a></p>
+					<p>交大、成大就只能通靈</p>
+					<p> 清大則是會公布在行事曆上 已經出來6號.7號
+						<a href="https://dgaa.site.nthu.edu.tw/var/file/209/1209/img/275/784811910.pdf">link</a>
+					</p>
+					<p> 台大基本上會第一個出來通常都會在假日 所以台大應該會在8號.9號
+					</p>
+					 <br>
+				</section>
+				<section>
+					<h5>訂房</h5>
+					<p>
+						推清齋十樓 <a href="https://affairs-guesths.vm.nthu.edu.tw/guest10/">link</a>
+					</p>
+					<p> 大推清齋會館 <a href="https://affairs-guesths.vm.nthu.edu.tw/">link</a>
+					</p>
+					<p class="grey-text"> 
+
+						在下寫的 <a href="code.html"style="   color: rgba(255, 255, 255, 0.943);">code</a> 雖然那時一開始還是沒有搶到
+					</p>
+				</section>
+				<section>
+					<h5>成大教授</h5>
+					<p>
+						454545
+					</p>
+				</section>
+			</article>
+
+		</main>
+		<footer>
+
+			<div>Website visit count:</div>
+
+
+			<script type='text/javascript'
+				src='https://www.freevisitorcounters.com/auth.php?id=2427c8375ad1a63b517f683fd951f63fcb2b552b'></script>
+			<script type="text/javascript"
+				src="https://www.freevisitorcounters.com/en/home/counter/1167399/t/5"></script>
+
+
+			<a href=" https://miro.com/app/board/uXjVP200ync=/?share_link_id=370763437742"
+				style="text-decoration:none;">
+				<p>Ty513</p>
+			</a>
+			<!--倘若你發現這個小驚喜 傳email至ben20415@gmail.com 主旨寫【我會正取的】-->
+		</footer>
+	</div>
+
+
+	<div id="right_side">
+		<img class="right-top" src="../jpg/6.png">
+	</div>
+</body>
+
+</html>
